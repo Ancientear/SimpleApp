@@ -43,7 +43,7 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-//    self.view.backgroundColor = [UIColor whiteColor];
+     self.view.backgroundColor = [UIColor whiteColor];
     [super viewDidLoad];
 //    // Do any additional setup after loading the view.
 //    [self.view addSubview:({
@@ -55,11 +55,31 @@
 //    })];
     
     
-//    TestView * view = [[TestView alloc]init];
-//    view.backgroundColor = [UIColor redColor];
-//    view.frame = CGRectMake(100,100,100,100);
-    //[self.view addSubview:view];
+    TestView * view = [[TestView alloc]init];
+    view.backgroundColor = [UIColor redColor];
+    view.frame = CGRectMake(100,100,100,100);
+    [self.view addSubview:view];
     
+    //为这个TestView小方框添加一个响应方法
+    //建立一个手势，包含具体的方法
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushController)];
+    //把手势添加到当前view
+    [view addGestureRecognizer:tapGesture];
+    
+}
+
+- (void)pushController{
+    //跳转到一个新的UIViewController。未定义则显示黑色
+    //[self.navigationController pushViewController:[[UIViewController alloc]init] animated:YES];
+    
+    //定义一个新的UIViewController
+    UIViewController *viewController = [[UIViewController alloc]init];
+    viewController.view.backgroundColor = [UIColor whiteColor];
+    viewController.navigationItem.title  = @"内容";
+    
+    viewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"右侧标题" style:UIBarButtonItemStylePlain target:self action:nil];
+    [self.navigationController pushViewController:viewController animated:YES];
+
 }
 
 @end

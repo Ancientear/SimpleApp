@@ -6,7 +6,7 @@
 //
 
 #import "SceneDelegate.h"
-
+#import "ViewController.h"
 @interface SceneDelegate ()
 
 @end
@@ -27,21 +27,26 @@
     UIWindowScene *windowScene = (UIWindowScene *)scene;
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     self.window.frame = windowScene.coordinateSpace.bounds;
-
+    UITabBarController *tabbarController = [[UITabBarController alloc]init];
+   
+    //这里的“新闻”首页就变成了viewController里的界面了
+    ViewController *viewController = [[ViewController alloc]init];
+    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:viewController];
     
 
-    UITabBarController *tabbarController = [[UITabBarController alloc]init];
+//    UIViewController *controller1 = [[UIViewController alloc]init];
+//    controller1.view.backgroundColor = [UIColor redColor];
+//    controller1.tabBarItem.title = @"新闻";
 
-    UIViewController *controller1 = [[UIViewController alloc]init];
-    controller1.view.backgroundColor = [UIColor redColor];
-    controller1.tabBarItem.title = @"新闻";
-    controller1.tabBarItem.image = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/left_disable.png"];
-    controller1.tabBarItem.selectedImage = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/right_disable.png"];
+    navigationController.tabBarItem.title = @"新闻";
+    navigationController.tabBarItem.image = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/left_disable.png"];
+    navigationController.tabBarItem.selectedImage = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/right_disable.png"];
+    
+    
     UIViewController *controller2 = [[UIViewController alloc]init];
     controller2.view.backgroundColor = [UIColor blueColor];
     controller2.tabBarItem.title = @"视频";
 
-    
     UIViewController *controller3 = [[UIViewController alloc]init];
     controller3.view.backgroundColor = [UIColor greenColor];
     controller3.tabBarItem.title = @"推荐";
@@ -53,7 +58,7 @@
 
     
     //[tabbarController setViewControllers:@[controller1,controller2,controller3,controller4]];
-     tabbarController.viewControllers = @[controller1,controller2,controller3,controller4];
+     tabbarController.viewControllers = @[navigationController,controller2,controller3,controller4];
     
     
     self.window.rootViewController = tabbarController;
