@@ -7,13 +7,12 @@
 
 #import "SceneDelegate.h"
 #import "ViewController.h"
-@interface SceneDelegate ()
+@interface SceneDelegate ()<UITabBarControllerDelegate>
+//声明要使用的这个协议
 
 @end
 
 @implementation SceneDelegate
-
-
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -56,23 +55,27 @@
     controller4.tabBarItem.title = @"我的";
 
     
-    //[tabbarController setViewControllers:@[controller1,controller2,controller3,controller4]];
      tabbarController.viewControllers = @[viewController,controller2,controller3,controller4];
+    
+    //需要自定义执行tabbar的delegate方法是在当前的这个类中执行的
+    //设计者：Delegate设计模式提供一些使用者可以自定义的操作，在对应的时机，让delegate执行对应方法。
+    //使用者：设置.delegate = self按需实现方法
+     tabbarController.delegate = self;
     
     //第一种方式
 //    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:navigationController];
 //    self.window.rootViewController = tabbarController;
-
-    
-    
     //第二种方式
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:tabbarController];
-
     self.window.rootViewController = navigationController;
+    
     [self.window makeKeyAndVisible];
      
 }
 
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    NSLog(@"did select");//终端输出命令，按需实现方法
+}
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
     // Called as the scene is being released by the system.
