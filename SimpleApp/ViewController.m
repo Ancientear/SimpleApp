@@ -7,9 +7,6 @@
 
 #import "ViewController.h"
 
-
-
-
 @interface TestView : UIView
 @end
 
@@ -46,22 +43,22 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.backgroundColor = [UIColor whiteColor];
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    [self.view addSubview:({
-        UILabel *label = [[UILabel alloc]init];
-        label.text = @"Hello world";
-        [label sizeToFit];
-        label.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height /2);
-        label;
-    })];
+//    // Do any additional setup after loading the view.
+//    [self.view addSubview:({
+//        UILabel *label = [[UILabel alloc]init];
+//        label.text = @"Hello world";
+//        [label sizeToFit];
+//        label.center = CGPointMake(self.view.frame.size.width / 2, self.view.frame.size.height /2);
+//        label;
+//    })];
     
     
-    TestView * view = [[TestView alloc]init];
-    view.backgroundColor = [UIColor redColor];
-    view.frame = CGRectMake(100,100,100,100);
-    [self.view addSubview:view];
+//    TestView * view = [[TestView alloc]init];
+//    view.backgroundColor = [UIColor redColor];
+//    view.frame = CGRectMake(100,100,100,100);
+    //[self.view addSubview:view];
     
 }
 

@@ -18,6 +18,39 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    //ios13前
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    self.window.backgroundColor = [UIColor redColor];
+    
+    
+    //ios13后初始化window方法需要改变
+    UIWindowScene *windowScene = (UIWindowScene *)scene;
+    self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
+    self.window.frame = windowScene.coordinateSpace.bounds;
+
+    
+
+    UITabBarController *tabbarController = [[UITabBarController alloc]init];
+
+    UIViewController *controller1 = [[UIViewController alloc]init];
+    controller1.view.backgroundColor = [UIColor redColor];
+    
+    UIViewController *controller2 = [[UIViewController alloc]init];
+    controller2.view.backgroundColor = [UIColor blueColor];
+    
+    UIViewController *controller3 = [[UIViewController alloc]init];
+    controller3.view.backgroundColor = [UIColor greenColor];
+    
+    UIViewController *controller4 = [[UIViewController alloc]init];
+    controller4.view.backgroundColor = [UIColor purpleColor];
+    
+    //[tabbarController setViewControllers:@[controller1,controller2,controller3,controller4]];
+     tabbarController.viewControllers = @[controller1,controller2,controller3,controller4];
+    
+    
+    self.window.rootViewController = tabbarController;
+    [self.window makeKeyAndVisible];
+     
 }
 
 
