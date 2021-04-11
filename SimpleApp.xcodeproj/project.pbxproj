@@ -14,6 +14,8 @@
 		7735CB2B261EF95700A2320B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7735CB2A261EF95700A2320B /* Assets.xcassets */; };
 		7735CB2E261EF95700A2320B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7735CB2C261EF95700A2320B /* LaunchScreen.storyboard */; };
 		7735CB31261EF95700A2320B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7735CB30261EF95700A2320B /* main.m */; };
+		778AF5182622B0CC00EA43C2 /* left_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF5172622B0CC00EA43C2 /* left_disable.png */; };
+		778AF51B2622B15A00EA43C2 /* right_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF51A2622B15A00EA43C2 /* right_disable.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		7735CB2D261EF95700A2320B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7735CB2F261EF95700A2320B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7735CB30261EF95700A2320B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		778AF5172622B0CC00EA43C2 /* left_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_disable.png; sourceTree = "<group>"; };
+		778AF51A2622B15A00EA43C2 /* right_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_disable.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 		7735CB1D261EF95600A2320B /* SimpleApp */ = {
 			isa = PBXGroup;
 			children = (
+				778AF5162622B0B300EA43C2 /* Image */,
 				7735CB1E261EF95600A2320B /* AppDelegate.h */,
 				7735CB1F261EF95600A2320B /* AppDelegate.m */,
 				7735CB21261EF95600A2320B /* SceneDelegate.h */,
@@ -74,6 +79,15 @@
 				7735CB30261EF95700A2320B /* main.m */,
 			);
 			path = SimpleApp;
+			sourceTree = "<group>";
+		};
+		778AF5162622B0B300EA43C2 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				778AF5172622B0CC00EA43C2 /* left_disable.png */,
+				778AF51A2622B15A00EA43C2 /* right_disable.png */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,8 +147,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7735CB2E261EF95700A2320B /* LaunchScreen.storyboard in Resources */,
+				778AF5182622B0CC00EA43C2 /* left_disable.png in Resources */,
 				7735CB2B261EF95700A2320B /* Assets.xcassets in Resources */,
 				7735CB29261EF95600A2320B /* Main.storyboard in Resources */,
+				778AF51B2622B15A00EA43C2 /* right_disable.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

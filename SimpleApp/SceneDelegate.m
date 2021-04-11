@@ -34,15 +34,23 @@
 
     UIViewController *controller1 = [[UIViewController alloc]init];
     controller1.view.backgroundColor = [UIColor redColor];
-    
+    controller1.tabBarItem.title = @"新闻";
+    controller1.tabBarItem.image = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/left_disable.png"];
+    controller1.tabBarItem.selectedImage = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/right_disable.png"];
     UIViewController *controller2 = [[UIViewController alloc]init];
     controller2.view.backgroundColor = [UIColor blueColor];
+    controller2.tabBarItem.title = @"视频";
+
     
     UIViewController *controller3 = [[UIViewController alloc]init];
     controller3.view.backgroundColor = [UIColor greenColor];
+    controller3.tabBarItem.title = @"推荐";
+
     
     UIViewController *controller4 = [[UIViewController alloc]init];
     controller4.view.backgroundColor = [UIColor purpleColor];
+    controller4.tabBarItem.title = @"我的";
+
     
     //[tabbarController setViewControllers:@[controller1,controller2,controller3,controller4]];
      tabbarController.viewControllers = @[controller1,controller2,controller3,controller4];
