@@ -39,37 +39,34 @@
 
 @end
 
+@interface ViewController() <UITableViewDataSource>
+
+@end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
-     self.view.backgroundColor = [UIColor whiteColor];
     [super viewDidLoad];
-
-    TestView * view = [[TestView alloc]init];
-    view.backgroundColor = [UIColor redColor];
-    view.frame = CGRectMake(100,100,100,100);
-    [self.view addSubview:view];
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    //为这个TestView小方框添加一个响应方法
-    //建立一个手势，包含具体的方法
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushController)];
-    
-    //把手势添加到当前view
-    [view addGestureRecognizer:tapGesture];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    tableView.dataSource = self;
+    [self.view addSubview:tableView];
+}
 
-    }
 
-    - (void)pushController{
-    //定义一个新的UIViewController
-    UIViewController *viewController = [[UIViewController alloc]init];
-    viewController.view.backgroundColor = [UIColor whiteColor];
-    viewController.navigationItem.title  = @"内容";
+//行数
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 20;
+}
 
-        
-    viewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"右侧标题" style:UIBarButtonItemStylePlain target:self action:nil];
-    [self.navigationController pushViewController:viewController animated:YES];
-
+//cell样式
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
+    cell.textLabel.text = @"主标题";
+    cell.detailTextLabel.text = @"副标题";
+    cell.imageView.image = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/right_disable.png"];
+    return cell;
 }
 
 @end
