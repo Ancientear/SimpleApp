@@ -60,9 +60,13 @@
     return 20;
 }
 
-//cell样式
+//测试tableview的回收池
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
+    //去回收池中取，如果取到了直接用，没有的话再声明一个cell
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
+    }
     cell.textLabel.text = @"主标题";
     cell.detailTextLabel.text = @"副标题";
     cell.imageView.image = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/right_disable.png"];
