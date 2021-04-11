@@ -31,16 +31,15 @@
    
     //这里的“新闻”首页就变成了viewController里的界面了
     ViewController *viewController = [[ViewController alloc]init];
-    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:viewController];
     
 
 //    UIViewController *controller1 = [[UIViewController alloc]init];
 //    controller1.view.backgroundColor = [UIColor redColor];
 //    controller1.tabBarItem.title = @"新闻";
 
-    navigationController.tabBarItem.title = @"新闻";
-    navigationController.tabBarItem.image = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/left_disable.png"];
-    navigationController.tabBarItem.selectedImage = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/right_disable.png"];
+    viewController.tabBarItem.title = @"新闻";
+    viewController.tabBarItem.image = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/left_disable.png"];
+    viewController.tabBarItem.selectedImage = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/right_disable.png"];
     
     
     UIViewController *controller2 = [[UIViewController alloc]init];
@@ -58,10 +57,18 @@
 
     
     //[tabbarController setViewControllers:@[controller1,controller2,controller3,controller4]];
-     tabbarController.viewControllers = @[navigationController,controller2,controller3,controller4];
+     tabbarController.viewControllers = @[viewController,controller2,controller3,controller4];
+    
+    //第一种方式
+//    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:navigationController];
+//    self.window.rootViewController = tabbarController;
+
     
     
-    self.window.rootViewController = tabbarController;
+    //第二种方式
+    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:tabbarController];
+
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
      
 }
