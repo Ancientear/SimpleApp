@@ -12,6 +12,7 @@
 //声明两个子View
 @property(nonatomic,strong,readwrite) UIView *backgroundView;
 @property(nonatomic,strong,readwrite) UIButton *deleteButton;
+@property(nonatomic,strong,readwrite)dispatch_block_t deleteBlock;
 @end
 
 @implementation GTDeleteCellView
@@ -44,19 +45,14 @@
     return self;
 }
 
-- (void) showDeleteView{
+//扩展点击的函数
+- (void) showDeleteViewFromPoint:(CGPoint) point clickBlock:(dispatch_block_t) clickBlock{
+    _deleteButton.frame = CGRectMake(point.x, point.y, 0, 0);
+    
+    _deleteBlock = [clickBlock copy];//点击的时候持有这个Block
     //显示到所有的view上
     [[UIApplication sharedApplication].keyWindow addSubview:self];
-    
-    //展示View的时候做一个最简单的动画，1s的时间
-//    [UIView animateWithDuration:1.f animations:^{
-//        //从左上角调到中间，且size在变大
-//        self.deleteButton.frame = CGRectMake((self.bounds.size.width - 200)/2, (self.bounds.size.height - 200)/2, 200, 200);
-//    }];
-
-    
-    
-    //较为复杂一点的动画
+   
     [UIView animateWithDuration:1.f delay:0.f usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:(UIViewAnimationOptionCurveEaseInOut) animations:^{
             self.deleteButton.frame = CGRectMake((self.bounds.size.width - 200)/2, (self.bounds.size.height - 200)/2, 200, 200);
         } completion:^(BOOL finished) {
@@ -67,6 +63,14 @@
     [self removeFromSuperview];
 }
 - (void) _clickButton{
+    if(_deleteBlock){
+        _deleteBlock();
+    }
     [self removeFromSuperview];
 }
+
+
+
+/*需要这个点击删除的X的同时，我们需要一个点击操作。那我们之前两个类之间交互是通过delegate来实现的。就是说点击按钮的时候，我们如何将cell上点击按钮的传递到Controller当中。那么现在我们需要的是如何将这个view按钮的点击同样传递到Controller中。那么之前呢我们实现delegate，现在使用block的方式
+ */
 @end

@@ -72,9 +72,14 @@
 }
 
 //在GTNormalTbaleViewCell中创建的delegate，方法重写，可以具体到某个cell和button
-- (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButtoN{
+- (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButton{
     GTDeleteCellView *deleteView = [[GTDeleteCellView alloc]initWithFrame:self.view.bounds];
-    [deleteView showDeleteView];
+    
+    //将cell点击按钮处的坐标系转换到整个屏幕的坐标系
+    CGRect rect = [tableViewCell convertRect:deleteButton.frame toView:nil];
+    [deleteView showDeleteViewFromPoint:rect.origin clickBlock:^{
+        NSLog(@"");
+    }];
 }
 
 
