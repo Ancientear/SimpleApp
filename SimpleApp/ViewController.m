@@ -12,7 +12,7 @@
 @end
 
 
-@interface ViewController() <UITableViewDataSource,UITableViewDelegate>
+@interface ViewController() <UITableViewDataSource,UITableViewDelegate,GTNormalTableViewCellDelegate>
 
 @end
 
@@ -64,11 +64,16 @@
     GTNormalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"id"];
     if(!cell){
         cell = [[GTNormalTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
+        cell.delegate = self;
     }
     [cell layoutTableViewCell];
     return cell;
 }
 
+//在GTNormalTbaleViewCell中创建的delegate，方法重写，可以具体到某个cell和button
+- (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButtoN{
+    NSLog(@"");
+}
 
 
 /*
