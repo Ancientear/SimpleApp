@@ -14,7 +14,8 @@
 
 
 @interface ViewController() <UITableViewDataSource,UITableViewDelegate,GTNormalTableViewCellDelegate>
-
+@property(nonatomic,strong,readwrite) UITableView *tableView;
+@property(nonatomic,strong,readwrite) NSMutableArray *dataArray;
 @end
 
 @implementation ViewController
@@ -22,6 +23,11 @@
 - (instancetype)init{
     self = [super init];
     if(self){
+        //数组中弄20个元素
+        _dataArray = @[].mutableCopy;
+        for(int i = 0 ; i < 20 ; ++i){
+            [_dataArray addObject:@(i)];
+        }
         self.tabBarItem.title = @"新闻";
         self.tabBarItem.image = [UIImage imageNamed:@"icons8-kawaii-jam-50.png"];
         self.tabBarItem.selectedImage = [UIImage imageNamed:@"icons8-kawaii-milk-50.png"];
@@ -33,12 +39,12 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
 
-    tableView.dataSource = self;
+    _tableView.dataSource = self;
     //触发方法
-    tableView.delegate = self;
-    [self.view addSubview:tableView];
+    _tableView.delegate = self;
+    [self.view addSubview:_tableView];
 }
 
 //高度
@@ -56,7 +62,7 @@
 
 //行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return _dataArray.count;
 }
 
 //测试tableview的回收池
@@ -75,10 +81,15 @@
 - (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButton{
     GTDeleteCellView *deleteView = [[GTDeleteCellView alloc]initWithFrame:self.view.bounds];
     
+    
     //将cell点击按钮处的坐标系转换到整个屏幕的坐标系
     CGRect rect = [tableViewCell convertRect:deleteButton.frame toView:nil];
+    
+    __weak typeof(self) wself = self;
     [deleteView showDeleteViewFromPoint:rect.origin clickBlock:^{
-        NSLog(@"");
+        __strong typeof(self)strongSelf = wself;
+        [strongSelf.dataArray removeLastObject];
+        [strongSelf.tableView deleteRowsAtIndexPaths:@[[self.tableView indexPathForCell:tableViewCell]] withRowAnimation:UITableViewRowAnimationAutomatic];
     }];
 }
 
