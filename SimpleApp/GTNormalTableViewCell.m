@@ -16,6 +16,7 @@
 @property(nonatomic,strong,readwrite) UILabel *timeLabel;
 
 @property(nonatomic,strong,readwrite) UIImageView *rightimageView;
+@property(nonatomic,strong,readwrite) UIButton *deleteButton;
 @end
 
 @implementation GTNormalTableViewCell
@@ -73,6 +74,18 @@
             
             self.rightimageView;
         })];
+        
+        [self.contentView addSubview:({
+            self.deleteButton = [[UIButton alloc]initWithFrame:CGRectMake(260, 80,30, 20)];
+            self.deleteButton.backgroundColor= [UIColor blueColor];
+            [self.deleteButton setTitle:@"X" forState:UIControlStateNormal];
+            [self.deleteButton setTitle:@"V" forState:UIControlStateHighlighted];
+            
+            //添加操作方法
+            [self.deleteButton addTarget:self action:@selector(deleteButtonClick) forControlEvents:UIControlEventTouchUpInside];
+
+            self.deleteButton;
+        })];
     }
     return self;
 }
@@ -93,5 +106,9 @@
     self.timeLabel.frame = CGRectMake(self.commentLabel.frame.origin.x + self.commentLabel.frame.size.width + 15,self.timeLabel.frame.origin.y, self.timeLabel.frame.size.width,self.timeLabel.frame.size.height);
 
 
+}
+
+-(void)deleteButtonClick{
+    NSLog(@"deleteButtonClick");
 }
 @end
