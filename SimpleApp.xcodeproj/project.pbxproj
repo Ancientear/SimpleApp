@@ -17,6 +17,7 @@
 		778AF5182622B0CC00EA43C2 /* left_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF5172622B0CC00EA43C2 /* left_disable.png */; };
 		778AF51B2622B15A00EA43C2 /* right_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF51A2622B15A00EA43C2 /* right_disable.png */; };
 		778AF51F2623DEEE00EA43C2 /* GTVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AF51E2623DEEE00EA43C2 /* GTVideoViewController.m */; };
+		778AF5232623EF1500EA43C2 /* GTRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AF5222623EF1500EA43C2 /* GTRecommendViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		778AF51A2622B15A00EA43C2 /* right_disable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_disable.png; sourceTree = "<group>"; };
 		778AF51D2623DEEE00EA43C2 /* GTVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoViewController.h; sourceTree = "<group>"; };
 		778AF51E2623DEEE00EA43C2 /* GTVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoViewController.m; sourceTree = "<group>"; };
+		778AF5212623EF1500EA43C2 /* GTRecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTRecommendViewController.h; sourceTree = "<group>"; };
+		778AF5222623EF1500EA43C2 /* GTRecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTRecommendViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 				7735CB30261EF95700A2320B /* main.m */,
 				778AF51D2623DEEE00EA43C2 /* GTVideoViewController.h */,
 				778AF51E2623DEEE00EA43C2 /* GTVideoViewController.m */,
+				778AF5212623EF1500EA43C2 /* GTRecommendViewController.h */,
+				778AF5222623EF1500EA43C2 /* GTRecommendViewController.m */,
 			);
 			path = SimpleApp;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 			files = (
 				7735CB26261EF95600A2320B /* ViewController.m in Sources */,
 				778AF51F2623DEEE00EA43C2 /* GTVideoViewController.m in Sources */,
+				778AF5232623EF1500EA43C2 /* GTRecommendViewController.m in Sources */,
 				7735CB20261EF95600A2320B /* AppDelegate.m in Sources */,
 				7735CB31261EF95700A2320B /* main.m in Sources */,
 				7735CB23261EF95600A2320B /* SceneDelegate.m in Sources */,

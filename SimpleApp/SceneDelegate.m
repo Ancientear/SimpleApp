@@ -8,6 +8,7 @@
 #import "SceneDelegate.h"
 #import "ViewController.h"
 #import "GTVideoViewController.h"
+#import "GTRecommendViewController.h"
 @interface SceneDelegate ()<UITabBarControllerDelegate>
 //声明要使用的这个协议
 
@@ -15,13 +16,6 @@
 
 @implementation SceneDelegate
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-    // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-    // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-    //ios13前
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    self.window.backgroundColor = [UIColor redColor];
-    
     
     //ios13后初始化window方法需要改变
     UIWindowScene *windowScene = (UIWindowScene *)scene;
@@ -44,9 +38,9 @@
     //想要改视频的Controller，则需要将这里的UIViewController替换为视频的Controller
     GTVideoViewController *videoController = [[GTVideoViewController alloc]init];
     //初始化可以放在GTVideoController中
-    UIViewController *controller3 = [[UIViewController alloc]init];
-    controller3.view.backgroundColor = [UIColor greenColor];
-    controller3.tabBarItem.title = @"推荐";
+    
+    GTRecommendViewController *recommendcontroller = [[GTRecommendViewController alloc]init];
+
 
     
     UIViewController *controller4 = [[UIViewController alloc]init];
@@ -54,7 +48,7 @@
     controller4.tabBarItem.title = @"我的";
 
     
-     tabbarController.viewControllers = @[viewController,videoController,controller3,controller4];
+     tabbarController.viewControllers = @[viewController,videoController,recommendcontroller,controller4];
     
     //需要自定义执行tabbar的delegate方法是在当前的这个类中执行的
     //设计者：Delegate设计模式提供一些使用者可以自定义的操作，在对应的时机，让delegate执行对应方法。
