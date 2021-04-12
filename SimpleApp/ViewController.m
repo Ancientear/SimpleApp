@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import "GTNormalTableViewCell.h"
 #import "GTDetailViewController.h"
+#import "GTDeleteCellView.h"
 @interface TestView : UIView
 @end
 
@@ -72,7 +73,8 @@
 
 //在GTNormalTbaleViewCell中创建的delegate，方法重写，可以具体到某个cell和button
 - (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButtoN{
-    NSLog(@"");
+    GTDeleteCellView *deleteView = [[GTDeleteCellView alloc]initWithFrame:self.view.bounds];
+    [deleteView showDeleteView];
 }
 
 
