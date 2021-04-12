@@ -44,6 +44,7 @@
 		778AF55F26243D8E00EA43C2 /* icons8-pentagram-devil-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF55126243D8E00EA43C2 /* icons8-pentagram-devil-50.png */; };
 		778AF56026243D8E00EA43C2 /* icons8-third-eye-symbol-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF55226243D8E00EA43C2 /* icons8-third-eye-symbol-50.png */; };
 		778AF56126243D8E00EA43C2 /* icons8-melchior-king-magician-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF55326243D8E00EA43C2 /* icons8-melchior-king-magician-50.png */; };
+		778AF565262463D900EA43C2 /* GTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AF564262463D900EA43C2 /* GTDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,8 @@
 		778AF55126243D8E00EA43C2 /* icons8-pentagram-devil-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-pentagram-devil-50.png"; sourceTree = "<group>"; };
 		778AF55226243D8E00EA43C2 /* icons8-third-eye-symbol-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-third-eye-symbol-50.png"; sourceTree = "<group>"; };
 		778AF55326243D8E00EA43C2 /* icons8-melchior-king-magician-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-melchior-king-magician-50.png"; sourceTree = "<group>"; };
+		778AF563262463D900EA43C2 /* GTDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTDetailViewController.h; sourceTree = "<group>"; };
+		778AF564262463D900EA43C2 /* GTDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				778AF5222623EF1500EA43C2 /* GTRecommendViewController.m */,
 				778AF52B262407C200EA43C2 /* GTNormalTableViewCell.h */,
 				778AF52C262407C200EA43C2 /* GTNormalTableViewCell.m */,
+				778AF563262463D900EA43C2 /* GTDetailViewController.h */,
+				778AF564262463D900EA43C2 /* GTDetailViewController.m */,
 			);
 			path = SimpleApp;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				778AF565262463D900EA43C2 /* GTDetailViewController.m in Sources */,
 				778AF52D262407C200EA43C2 /* GTNormalTableViewCell.m in Sources */,
 				7735CB26261EF95600A2320B /* ViewController.m in Sources */,
 				778AF51F2623DEEE00EA43C2 /* GTVideoViewController.m in Sources */,
