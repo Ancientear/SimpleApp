@@ -7,6 +7,7 @@
 
 #import "SceneDelegate.h"
 #import "ViewController.h"
+#import "GTVideoViewController.h"
 @interface SceneDelegate ()<UITabBarControllerDelegate>
 //声明要使用的这个协议
 
@@ -37,14 +38,12 @@
 //    controller1.tabBarItem.title = @"新闻";
 
     viewController.tabBarItem.title = @"新闻";
-    viewController.tabBarItem.image = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/left_disable.png"];
-    viewController.tabBarItem.selectedImage = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/right_disable.png"];
+//    viewController.tabBarItem.image = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/left_disable.png"];
+//    viewController.tabBarItem.selectedImage = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/right_disable.png"];
     
-    
-    UIViewController *controller2 = [[UIViewController alloc]init];
-    controller2.view.backgroundColor = [UIColor blueColor];
-    controller2.tabBarItem.title = @"视频";
-
+    //想要改视频的Controller，则需要将这里的UIViewController替换为视频的Controller
+    GTVideoViewController *videoController = [[GTVideoViewController alloc]init];
+    //初始化可以放在GTVideoController中
     UIViewController *controller3 = [[UIViewController alloc]init];
     controller3.view.backgroundColor = [UIColor greenColor];
     controller3.tabBarItem.title = @"推荐";
@@ -55,7 +54,7 @@
     controller4.tabBarItem.title = @"我的";
 
     
-     tabbarController.viewControllers = @[viewController,controller2,controller3,controller4];
+     tabbarController.viewControllers = @[viewController,videoController,controller3,controller4];
     
     //需要自定义执行tabbar的delegate方法是在当前的这个类中执行的
     //设计者：Delegate设计模式提供一些使用者可以自定义的操作，在对应的时机，让delegate执行对应方法。
