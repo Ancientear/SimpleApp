@@ -35,7 +35,7 @@
         
         
         [self addSubview:({
-            _deleteButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
+            _deleteButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
             [_deleteButton addTarget:self action:@selector(_clickButton) forControlEvents:UIControlEventTouchUpInside];
             _deleteButton.backgroundColor = [UIColor blueColor];
             _deleteButton;
@@ -47,6 +47,21 @@
 - (void) showDeleteView{
     //显示到所有的view上
     [[UIApplication sharedApplication].keyWindow addSubview:self];
+    
+    //展示View的时候做一个最简单的动画，1s的时间
+//    [UIView animateWithDuration:1.f animations:^{
+//        //从左上角调到中间，且size在变大
+//        self.deleteButton.frame = CGRectMake((self.bounds.size.width - 200)/2, (self.bounds.size.height - 200)/2, 200, 200);
+//    }];
+
+    
+    
+    //较为复杂一点的动画
+    [UIView animateWithDuration:1.f delay:0.f usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:(UIViewAnimationOptionCurveEaseInOut) animations:^{
+            self.deleteButton.frame = CGRectMake((self.bounds.size.width - 200)/2, (self.bounds.size.height - 200)/2, 200, 200);
+        } completion:^(BOOL finished) {
+            NSLog(@"");
+        }];
 }
 - (void) dismissDeleteView{
     [self removeFromSuperview];
