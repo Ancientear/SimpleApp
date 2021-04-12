@@ -18,6 +18,7 @@
 		778AF51B2622B15A00EA43C2 /* right_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF51A2622B15A00EA43C2 /* right_disable.png */; };
 		778AF51F2623DEEE00EA43C2 /* GTVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AF51E2623DEEE00EA43C2 /* GTVideoViewController.m */; };
 		778AF5232623EF1500EA43C2 /* GTRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AF5222623EF1500EA43C2 /* GTRecommendViewController.m */; };
+		778AF52D262407C200EA43C2 /* GTNormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AF52C262407C200EA43C2 /* GTNormalTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		778AF51E2623DEEE00EA43C2 /* GTVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoViewController.m; sourceTree = "<group>"; };
 		778AF5212623EF1500EA43C2 /* GTRecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTRecommendViewController.h; sourceTree = "<group>"; };
 		778AF5222623EF1500EA43C2 /* GTRecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTRecommendViewController.m; sourceTree = "<group>"; };
+		778AF52B262407C200EA43C2 /* GTNormalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNormalTableViewCell.h; sourceTree = "<group>"; };
+		778AF52C262407C200EA43C2 /* GTNormalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNormalTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 				778AF51E2623DEEE00EA43C2 /* GTVideoViewController.m */,
 				778AF5212623EF1500EA43C2 /* GTRecommendViewController.h */,
 				778AF5222623EF1500EA43C2 /* GTRecommendViewController.m */,
+				778AF52B262407C200EA43C2 /* GTNormalTableViewCell.h */,
+				778AF52C262407C200EA43C2 /* GTNormalTableViewCell.m */,
 			);
 			path = SimpleApp;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				778AF52D262407C200EA43C2 /* GTNormalTableViewCell.m in Sources */,
 				7735CB26261EF95600A2320B /* ViewController.m in Sources */,
 				778AF51F2623DEEE00EA43C2 /* GTVideoViewController.m in Sources */,
 				778AF5232623EF1500EA43C2 /* GTRecommendViewController.m in Sources */,
