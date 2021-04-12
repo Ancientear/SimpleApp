@@ -14,6 +14,8 @@
 @property(nonatomic,strong,readwrite) UILabel *sourceLabel;
 @property(nonatomic,strong,readwrite) UILabel *commentLabel;
 @property(nonatomic,strong,readwrite) UILabel *timeLabel;
+
+@property(nonatomic,strong,readwrite) UIImageView *rightimageView;
 @end
 
 @implementation GTNormalTableViewCell
@@ -61,6 +63,15 @@
             self.timeLabel.textColor = [UIColor grayColor];
 
             self.timeLabel;
+        })];
+        
+        [self.contentView addSubview:({
+            self.rightimageView = [[UIImageView alloc]initWithFrame:CGRectMake(280, 15,70, 70)];
+            self.rightimageView.image = [UIImage imageNamed:@"icons8-greek-god-zeus-50.png"];
+            //图片显示比例等,偏左偏右，充满
+            //self.rightimageView.contentMode = UIViewContentModeScaleAspectFit;
+            
+            self.rightimageView;
         })];
     }
     return self;

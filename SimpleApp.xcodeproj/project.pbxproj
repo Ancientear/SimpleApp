@@ -19,6 +19,31 @@
 		778AF51F2623DEEE00EA43C2 /* GTVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AF51E2623DEEE00EA43C2 /* GTVideoViewController.m */; };
 		778AF5232623EF1500EA43C2 /* GTRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AF5222623EF1500EA43C2 /* GTRecommendViewController.m */; };
 		778AF52D262407C200EA43C2 /* GTNormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AF52C262407C200EA43C2 /* GTNormalTableViewCell.m */; };
+		778AF53A26243D8000EA43C2 /* icons8-kawaii-broccoli-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF52F26243D8000EA43C2 /* icons8-kawaii-broccoli-50.png */; };
+		778AF53B26243D8000EA43C2 /* icons8-爱德华·蒙克-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF53026243D8000EA43C2 /* icons8-爱德华·蒙克-50.png */; };
+		778AF53C26243D8000EA43C2 /* icons8-kawaii-bread-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF53126243D8000EA43C2 /* icons8-kawaii-bread-50.png */; };
+		778AF53D26243D8000EA43C2 /* icons8-greek-god-zeus-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF53226243D8000EA43C2 /* icons8-greek-god-zeus-50.png */; };
+		778AF53E26243D8000EA43C2 /* icons8-hindu-swastik-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF53326243D8000EA43C2 /* icons8-hindu-swastik-50.png */; };
+		778AF53F26243D8000EA43C2 /* icons8-buddha-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF53426243D8000EA43C2 /* icons8-buddha-50.png */; };
+		778AF54026243D8000EA43C2 /* icons8-greek-god-hermes-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF53526243D8000EA43C2 /* icons8-greek-god-hermes-50.png */; };
+		778AF54126243D8000EA43C2 /* icons8-kawaii-coffee-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF53626243D8000EA43C2 /* icons8-kawaii-coffee-50.png */; };
+		778AF54226243D8000EA43C2 /* icons8-大耳猴-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF53726243D8000EA43C2 /* icons8-大耳猴-50.png */; };
+		778AF54326243D8000EA43C2 /* icons8-折纸-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF53826243D8000EA43C2 /* icons8-折纸-50.png */; };
+		778AF54426243D8000EA43C2 /* icons8-阿尔卑斯山-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF53926243D8000EA43C2 /* icons8-阿尔卑斯山-50.png */; };
+		778AF55426243D8E00EA43C2 /* icons8-kawaii-milk-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF54626243D8E00EA43C2 /* icons8-kawaii-milk-50.png */; };
+		778AF55526243D8E00EA43C2 /* icons8-lord-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF54726243D8E00EA43C2 /* icons8-lord-50.png */; };
+		778AF55626243D8E00EA43C2 /* icons8-kawaii-jam-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF54826243D8E00EA43C2 /* icons8-kawaii-jam-50.png */; };
+		778AF55726243D8E00EA43C2 /* icons8-kawaii-croissant-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF54926243D8E00EA43C2 /* icons8-kawaii-croissant-50.png */; };
+		778AF55826243D8E00EA43C2 /* icons8-kawaii-dinosaur-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF54A26243D8E00EA43C2 /* icons8-kawaii-dinosaur-50.png */; };
+		778AF55926243D8E00EA43C2 /* icons8-kawaii-taco-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF54B26243D8E00EA43C2 /* icons8-kawaii-taco-50.png */; };
+		778AF55A26243D8E00EA43C2 /* icons8-kawaii-french-fries-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF54C26243D8E00EA43C2 /* icons8-kawaii-french-fries-50.png */; };
+		778AF55B26243D8E00EA43C2 /* icons8-kawaii-noodle-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF54D26243D8E00EA43C2 /* icons8-kawaii-noodle-50.png */; };
+		778AF55C26243D8E00EA43C2 /* icons8-lilith-symbol-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF54E26243D8E00EA43C2 /* icons8-lilith-symbol-50.png */; };
+		778AF55D26243D8E00EA43C2 /* icons8-mayura-gesture-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF54F26243D8E00EA43C2 /* icons8-mayura-gesture-50.png */; };
+		778AF55E26243D8E00EA43C2 /* icons8-kawaii-cupcake-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF55026243D8E00EA43C2 /* icons8-kawaii-cupcake-50.png */; };
+		778AF55F26243D8E00EA43C2 /* icons8-pentagram-devil-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF55126243D8E00EA43C2 /* icons8-pentagram-devil-50.png */; };
+		778AF56026243D8E00EA43C2 /* icons8-third-eye-symbol-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF55226243D8E00EA43C2 /* icons8-third-eye-symbol-50.png */; };
+		778AF56126243D8E00EA43C2 /* icons8-melchior-king-magician-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF55326243D8E00EA43C2 /* icons8-melchior-king-magician-50.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +67,31 @@
 		778AF5222623EF1500EA43C2 /* GTRecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTRecommendViewController.m; sourceTree = "<group>"; };
 		778AF52B262407C200EA43C2 /* GTNormalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNormalTableViewCell.h; sourceTree = "<group>"; };
 		778AF52C262407C200EA43C2 /* GTNormalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNormalTableViewCell.m; sourceTree = "<group>"; };
+		778AF52F26243D8000EA43C2 /* icons8-kawaii-broccoli-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-kawaii-broccoli-50.png"; sourceTree = "<group>"; };
+		778AF53026243D8000EA43C2 /* icons8-爱德华·蒙克-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-爱德华·蒙克-50.png"; sourceTree = "<group>"; };
+		778AF53126243D8000EA43C2 /* icons8-kawaii-bread-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-kawaii-bread-50.png"; sourceTree = "<group>"; };
+		778AF53226243D8000EA43C2 /* icons8-greek-god-zeus-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-greek-god-zeus-50.png"; sourceTree = "<group>"; };
+		778AF53326243D8000EA43C2 /* icons8-hindu-swastik-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-hindu-swastik-50.png"; sourceTree = "<group>"; };
+		778AF53426243D8000EA43C2 /* icons8-buddha-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-buddha-50.png"; sourceTree = "<group>"; };
+		778AF53526243D8000EA43C2 /* icons8-greek-god-hermes-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-greek-god-hermes-50.png"; sourceTree = "<group>"; };
+		778AF53626243D8000EA43C2 /* icons8-kawaii-coffee-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-kawaii-coffee-50.png"; sourceTree = "<group>"; };
+		778AF53726243D8000EA43C2 /* icons8-大耳猴-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-大耳猴-50.png"; sourceTree = "<group>"; };
+		778AF53826243D8000EA43C2 /* icons8-折纸-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-折纸-50.png"; sourceTree = "<group>"; };
+		778AF53926243D8000EA43C2 /* icons8-阿尔卑斯山-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-阿尔卑斯山-50.png"; sourceTree = "<group>"; };
+		778AF54626243D8E00EA43C2 /* icons8-kawaii-milk-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-kawaii-milk-50.png"; sourceTree = "<group>"; };
+		778AF54726243D8E00EA43C2 /* icons8-lord-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-lord-50.png"; sourceTree = "<group>"; };
+		778AF54826243D8E00EA43C2 /* icons8-kawaii-jam-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-kawaii-jam-50.png"; sourceTree = "<group>"; };
+		778AF54926243D8E00EA43C2 /* icons8-kawaii-croissant-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-kawaii-croissant-50.png"; sourceTree = "<group>"; };
+		778AF54A26243D8E00EA43C2 /* icons8-kawaii-dinosaur-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-kawaii-dinosaur-50.png"; sourceTree = "<group>"; };
+		778AF54B26243D8E00EA43C2 /* icons8-kawaii-taco-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-kawaii-taco-50.png"; sourceTree = "<group>"; };
+		778AF54C26243D8E00EA43C2 /* icons8-kawaii-french-fries-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-kawaii-french-fries-50.png"; sourceTree = "<group>"; };
+		778AF54D26243D8E00EA43C2 /* icons8-kawaii-noodle-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-kawaii-noodle-50.png"; sourceTree = "<group>"; };
+		778AF54E26243D8E00EA43C2 /* icons8-lilith-symbol-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-lilith-symbol-50.png"; sourceTree = "<group>"; };
+		778AF54F26243D8E00EA43C2 /* icons8-mayura-gesture-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-mayura-gesture-50.png"; sourceTree = "<group>"; };
+		778AF55026243D8E00EA43C2 /* icons8-kawaii-cupcake-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-kawaii-cupcake-50.png"; sourceTree = "<group>"; };
+		778AF55126243D8E00EA43C2 /* icons8-pentagram-devil-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-pentagram-devil-50.png"; sourceTree = "<group>"; };
+		778AF55226243D8E00EA43C2 /* icons8-third-eye-symbol-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-third-eye-symbol-50.png"; sourceTree = "<group>"; };
+		778AF55326243D8E00EA43C2 /* icons8-melchior-king-magician-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-melchior-king-magician-50.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +149,31 @@
 		778AF5162622B0B300EA43C2 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				778AF54926243D8E00EA43C2 /* icons8-kawaii-croissant-50.png */,
+				778AF55026243D8E00EA43C2 /* icons8-kawaii-cupcake-50.png */,
+				778AF54A26243D8E00EA43C2 /* icons8-kawaii-dinosaur-50.png */,
+				778AF54C26243D8E00EA43C2 /* icons8-kawaii-french-fries-50.png */,
+				778AF54826243D8E00EA43C2 /* icons8-kawaii-jam-50.png */,
+				778AF54626243D8E00EA43C2 /* icons8-kawaii-milk-50.png */,
+				778AF54D26243D8E00EA43C2 /* icons8-kawaii-noodle-50.png */,
+				778AF54B26243D8E00EA43C2 /* icons8-kawaii-taco-50.png */,
+				778AF54E26243D8E00EA43C2 /* icons8-lilith-symbol-50.png */,
+				778AF54726243D8E00EA43C2 /* icons8-lord-50.png */,
+				778AF54F26243D8E00EA43C2 /* icons8-mayura-gesture-50.png */,
+				778AF55326243D8E00EA43C2 /* icons8-melchior-king-magician-50.png */,
+				778AF55126243D8E00EA43C2 /* icons8-pentagram-devil-50.png */,
+				778AF55226243D8E00EA43C2 /* icons8-third-eye-symbol-50.png */,
+				778AF53926243D8000EA43C2 /* icons8-阿尔卑斯山-50.png */,
+				778AF53026243D8000EA43C2 /* icons8-爱德华·蒙克-50.png */,
+				778AF53726243D8000EA43C2 /* icons8-大耳猴-50.png */,
+				778AF53826243D8000EA43C2 /* icons8-折纸-50.png */,
+				778AF53426243D8000EA43C2 /* icons8-buddha-50.png */,
+				778AF53526243D8000EA43C2 /* icons8-greek-god-hermes-50.png */,
+				778AF53226243D8000EA43C2 /* icons8-greek-god-zeus-50.png */,
+				778AF53326243D8000EA43C2 /* icons8-hindu-swastik-50.png */,
+				778AF53126243D8000EA43C2 /* icons8-kawaii-bread-50.png */,
+				778AF52F26243D8000EA43C2 /* icons8-kawaii-broccoli-50.png */,
+				778AF53626243D8000EA43C2 /* icons8-kawaii-coffee-50.png */,
 				778AF5172622B0CC00EA43C2 /* left_disable.png */,
 				778AF51A2622B15A00EA43C2 /* right_disable.png */,
 			);
@@ -162,10 +237,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				7735CB2E261EF95700A2320B /* LaunchScreen.storyboard in Resources */,
+				778AF54126243D8000EA43C2 /* icons8-kawaii-coffee-50.png in Resources */,
+				778AF53C26243D8000EA43C2 /* icons8-kawaii-bread-50.png in Resources */,
+				778AF56126243D8E00EA43C2 /* icons8-melchior-king-magician-50.png in Resources */,
+				778AF55526243D8E00EA43C2 /* icons8-lord-50.png in Resources */,
 				778AF5182622B0CC00EA43C2 /* left_disable.png in Resources */,
+				778AF55B26243D8E00EA43C2 /* icons8-kawaii-noodle-50.png in Resources */,
+				778AF55426243D8E00EA43C2 /* icons8-kawaii-milk-50.png in Resources */,
 				7735CB2B261EF95700A2320B /* Assets.xcassets in Resources */,
+				778AF55926243D8E00EA43C2 /* icons8-kawaii-taco-50.png in Resources */,
+				778AF54326243D8000EA43C2 /* icons8-折纸-50.png in Resources */,
+				778AF56026243D8E00EA43C2 /* icons8-third-eye-symbol-50.png in Resources */,
 				7735CB29261EF95600A2320B /* Main.storyboard in Resources */,
+				778AF55F26243D8E00EA43C2 /* icons8-pentagram-devil-50.png in Resources */,
+				778AF55726243D8E00EA43C2 /* icons8-kawaii-croissant-50.png in Resources */,
+				778AF53B26243D8000EA43C2 /* icons8-爱德华·蒙克-50.png in Resources */,
+				778AF53F26243D8000EA43C2 /* icons8-buddha-50.png in Resources */,
 				778AF51B2622B15A00EA43C2 /* right_disable.png in Resources */,
+				778AF55826243D8E00EA43C2 /* icons8-kawaii-dinosaur-50.png in Resources */,
+				778AF53A26243D8000EA43C2 /* icons8-kawaii-broccoli-50.png in Resources */,
+				778AF55A26243D8E00EA43C2 /* icons8-kawaii-french-fries-50.png in Resources */,
+				778AF55E26243D8E00EA43C2 /* icons8-kawaii-cupcake-50.png in Resources */,
+				778AF53E26243D8000EA43C2 /* icons8-hindu-swastik-50.png in Resources */,
+				778AF55626243D8E00EA43C2 /* icons8-kawaii-jam-50.png in Resources */,
+				778AF54026243D8000EA43C2 /* icons8-greek-god-hermes-50.png in Resources */,
+				778AF54426243D8000EA43C2 /* icons8-阿尔卑斯山-50.png in Resources */,
+				778AF55C26243D8E00EA43C2 /* icons8-lilith-symbol-50.png in Resources */,
+				778AF55D26243D8E00EA43C2 /* icons8-mayura-gesture-50.png in Resources */,
+				778AF53D26243D8000EA43C2 /* icons8-greek-god-zeus-50.png in Resources */,
+				778AF54226243D8000EA43C2 /* icons8-大耳猴-50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

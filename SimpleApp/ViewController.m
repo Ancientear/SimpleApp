@@ -12,31 +12,28 @@
 @end
 
 
-@implementation  TestView
-
-
-- (instancetype)init{
-    self = [super init];
-    if(self){
-    }
-    return self;
-}
-
-
-
-@end
-
 @interface ViewController() <UITableViewDataSource,UITableViewDelegate>
 
 @end
 
 @implementation ViewController
 
+- (instancetype)init{
+    self = [super init];
+    if(self){
+        self.tabBarItem.title = @"新闻";
+        self.tabBarItem.image = [UIImage imageNamed:@"icons8-kawaii-jam-50.png"];
+        self.tabBarItem.selectedImage = [UIImage imageNamed:@"icons8-kawaii-milk-50.png"];
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
     UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+
     tableView.dataSource = self;
     //触发方法
     tableView.delegate = self;

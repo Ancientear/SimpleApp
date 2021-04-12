@@ -25,19 +25,10 @@
    
     //这里的“新闻”首页就变成了viewController里的界面了
     ViewController *viewController = [[ViewController alloc]init];
-    
 
-//    UIViewController *controller1 = [[UIViewController alloc]init];
-//    controller1.view.backgroundColor = [UIColor redColor];
-//    controller1.tabBarItem.title = @"新闻";
-
-    viewController.tabBarItem.title = @"新闻";
-//    viewController.tabBarItem.image = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/left_disable.png"];
-//    viewController.tabBarItem.selectedImage = [UIImage imageNamed:@"/Users/shenfan/OCProjects/SimpleApp/SimpleApp/Image/right_disable.png"];
     
     //想要改视频的Controller，则需要将这里的UIViewController替换为视频的Controller
     GTVideoViewController *videoController = [[GTVideoViewController alloc]init];
-    //初始化可以放在GTVideoController中
     
     GTRecommendViewController *recommendcontroller = [[GTRecommendViewController alloc]init];
 
@@ -46,6 +37,8 @@
     UIViewController *controller4 = [[UIViewController alloc]init];
     controller4.view.backgroundColor = [UIColor purpleColor];
     controller4.tabBarItem.title = @"我的";
+    controller4.tabBarItem.image = [UIImage imageNamed:@"icons8-爱德华·蒙克-50.png"];
+    controller4.tabBarItem.selectedImage = [UIImage imageNamed:@"icons8-kawaii-dinosaur-50.png"];
 
     
      tabbarController.viewControllers = @[viewController,videoController,recommendcontroller,controller4];

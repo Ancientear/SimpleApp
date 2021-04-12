@@ -16,7 +16,9 @@
 - (instancetype) init{
     self = [super init];
     if(self){
-    self.tabBarItem.title = @"推荐";
+        self.tabBarItem.title = @"推荐";
+        self.tabBarItem.image = [UIImage imageNamed:@"icons8-pentagram-devil-50.png"];
+        self.tabBarItem.selectedImage = [UIImage imageNamed:@"icons8-kawaii-broccoli-50.png"];
     }
     return self;
 }

@@ -17,6 +17,8 @@
     self = [super init];
     if(self){
         self.tabBarItem.title = @"视频";
+        self.tabBarItem.image = [UIImage imageNamed:@"icons8-kawaii-noodle-50.png"];
+        self.tabBarItem.selectedImage = [UIImage imageNamed:@"icons8-kawaii-taco-50.png"];
     }
     return  self;
 }
