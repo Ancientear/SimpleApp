@@ -130,21 +130,13 @@
 		7735CB1D261EF95600A2320B /* SimpleApp */ = {
 			isa = PBXGroup;
 			children = (
-				778AF56C26254D4300EA43C2 /* NewsController */,
-				778AF5162622B0B300EA43C2 /* Image */,
-				7735CB1E261EF95600A2320B /* AppDelegate.h */,
-				7735CB1F261EF95600A2320B /* AppDelegate.m */,
-				7735CB21261EF95600A2320B /* SceneDelegate.h */,
-				7735CB22261EF95600A2320B /* SceneDelegate.m */,
-				7735CB27261EF95600A2320B /* Main.storyboard */,
-				7735CB2A261EF95700A2320B /* Assets.xcassets */,
-				7735CB2C261EF95700A2320B /* LaunchScreen.storyboard */,
 				7735CB2F261EF95700A2320B /* Info.plist */,
-				7735CB30261EF95700A2320B /* main.m */,
-				778AF51D2623DEEE00EA43C2 /* GTVideoViewController.h */,
-				778AF51E2623DEEE00EA43C2 /* GTVideoViewController.m */,
-				778AF5212623EF1500EA43C2 /* GTRecommendViewController.h */,
-				778AF5222623EF1500EA43C2 /* GTRecommendViewController.m */,
+				77BF7B3F2625935600352BA7 /* Main */,
+				77BF7B3A262592BA00352BA7 /* News */,
+				77BF7B402625937E00352BA7 /* Video */,
+				77BF7B422625939800352BA7 /* Recommend */,
+				77BF7B3D2625930200352BA7 /* CommonTools */,
+				77BF7B3E2625931A00352BA7 /* SupportingFiles */,
 			);
 			path = SimpleApp;
 			sourceTree = "<group>";
@@ -183,27 +175,16 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
-		778AF56C26254D4300EA43C2 /* NewsController */ = {
+		77BF7B3A262592BA00352BA7 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				7735CB24261EF95600A2320B /* GTNewsViewController.h */,
-				7735CB25261EF95600A2320B /* GTNewsViewController.m */,
-				778AF56F26254DCF00EA43C2 /* List */,
-				778AF56E26254DBE00EA43C2 /* detail */,
+				77BF7B3C262592C800352BA7 /* Controllers */,
+				77BF7B3B262592C100352BA7 /* Views */,
 			);
-			path = NewsController;
+			path = News;
 			sourceTree = "<group>";
 		};
-		778AF56E26254DBE00EA43C2 /* detail */ = {
-			isa = PBXGroup;
-			children = (
-				778AF563262463D900EA43C2 /* GTDetailViewController.h */,
-				778AF564262463D900EA43C2 /* GTDetailViewController.m */,
-			);
-			path = detail;
-			sourceTree = "<group>";
-		};
-		778AF56F26254DCF00EA43C2 /* List */ = {
+		77BF7B3B262592C100352BA7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				778AF52B262407C200EA43C2 /* GTNormalTableViewCell.h */,
@@ -211,7 +192,82 @@
 				778AF56726248A9D00EA43C2 /* GTDeleteCellView.h */,
 				778AF56826248A9D00EA43C2 /* GTDeleteCellView.m */,
 			);
-			path = List;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		77BF7B3C262592C800352BA7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7735CB25261EF95600A2320B /* GTNewsViewController.m */,
+				7735CB24261EF95600A2320B /* GTNewsViewController.h */,
+				778AF563262463D900EA43C2 /* GTDetailViewController.h */,
+				778AF564262463D900EA43C2 /* GTDetailViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		77BF7B3D2625930200352BA7 /* CommonTools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommonTools;
+			sourceTree = "<group>";
+		};
+		77BF7B3E2625931A00352BA7 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7735CB2A261EF95700A2320B /* Assets.xcassets */,
+				778AF5162622B0B300EA43C2 /* Image */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		77BF7B3F2625935600352BA7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7735CB1E261EF95600A2320B /* AppDelegate.h */,
+				7735CB1F261EF95600A2320B /* AppDelegate.m */,
+				7735CB21261EF95600A2320B /* SceneDelegate.h */,
+				7735CB22261EF95600A2320B /* SceneDelegate.m */,
+				7735CB27261EF95600A2320B /* Main.storyboard */,
+				7735CB30261EF95700A2320B /* main.m */,
+				7735CB2C261EF95700A2320B /* LaunchScreen.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		77BF7B402625937E00352BA7 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				77BF7B412625938800352BA7 /* Controllers */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		77BF7B412625938800352BA7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				778AF51E2623DEEE00EA43C2 /* GTVideoViewController.m */,
+				778AF51D2623DEEE00EA43C2 /* GTVideoViewController.h */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		77BF7B422625939800352BA7 /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				77BF7B43262593A500352BA7 /* Controllers */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		77BF7B43262593A500352BA7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				778AF5212623EF1500EA43C2 /* GTRecommendViewController.h */,
+				778AF5222623EF1500EA43C2 /* GTRecommendViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
