@@ -69,8 +69,4 @@
     [self removeFromSuperview];
 }
 
-
-
-/*需要这个点击删除的X的同时，我们需要一个点击操作。那我们之前两个类之间交互是通过delegate来实现的。就是说点击按钮的时候，我们如何将cell上点击按钮的传递到Controller当中。那么现在我们需要的是如何将这个view按钮的点击同样传递到Controller中。那么之前呢我们实现delegate，现在使用block的方式
- */
 @end

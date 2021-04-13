@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+//设置recommendTab
 @interface GTRecommendViewController : UIViewController
 
 @end

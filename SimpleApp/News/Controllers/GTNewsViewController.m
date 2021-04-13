@@ -42,10 +42,10 @@
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
 
     _tableView.dataSource = self;
-    //触发方法
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
 }
+
 
 #pragma mark - UITableViewDelegate
 //高度
@@ -61,6 +61,7 @@
 }
 
 
+#pragma mark - UITableViewDataSource
 //行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return _dataArray.count;
@@ -78,11 +79,11 @@
     return cell;
 }
 
+#pragma mark - GTNormalTableViewCellDelegate
 //在GTNormalTbaleViewCell中创建的delegate，方法重写，可以具体到某个cell和button
 - (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButton{
+    
     GTDeleteCellView *deleteView = [[GTDeleteCellView alloc]initWithFrame:self.view.bounds];
-    
-    
     //将cell点击按钮处的坐标系转换到整个屏幕的坐标系
     CGRect rect = [tableViewCell convertRect:deleteButton.frame toView:nil];
     
@@ -93,11 +94,4 @@
         [strongSelf.tableView deleteRowsAtIndexPaths:@[[self.tableView indexPathForCell:tableViewCell]] withRowAnimation:UITableViewRowAnimationAutomatic];
     }];
 }
-
-
-/*
- 1、创建UITableView，设置delegate和datasource，通过两个delegate
- 2、选择实现UITableViewDataSource中方法，行数、cell复用
- 3、选择实现UITableViewDelegate中方法（高度、headerFooter、点击）
- */
 @end

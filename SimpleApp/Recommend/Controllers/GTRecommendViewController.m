@@ -27,8 +27,6 @@
 	self.view.backgroundColor = [UIColor whiteColor];
 
 	UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
-	scrollView.backgroundColor = [UIColor lightGrayColor];
-	//不设置则代表的是普通的UIView
 	scrollView.contentSize = CGSizeMake(self.view.bounds.size.width * 5,self.view.bounds.size.height);
 
 	scrollView.delegate = self;
@@ -52,13 +50,15 @@
 				[view addGestureRecognizer:tapGesture];
 				view;
 			})];
+            
+            
 			view.backgroundColor = [colorArray objectAtIndex:i];    //使用数组给view添加颜色
 			view;
 		})];
 	}
 
 	//显示翻页的效果
-	//scrollView.pagingEnabled = YES;
+	scrollView.pagingEnabled = YES;
 	[self.view addSubview: scrollView];
 
 }

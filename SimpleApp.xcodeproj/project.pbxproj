@@ -46,6 +46,7 @@
 		778AF56126243D8E00EA43C2 /* icons8-melchior-king-magician-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF55326243D8E00EA43C2 /* icons8-melchior-king-magician-50.png */; };
 		778AF565262463D900EA43C2 /* GTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AF564262463D900EA43C2 /* GTDetailViewController.m */; };
 		778AF56926248A9D00EA43C2 /* GTDeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AF56826248A9D00EA43C2 /* GTDeleteCellView.m */; };
+		77BF7B4C2625A13C00352BA7 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7B4B2625A13C00352BA7 /* MineViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,8 @@
 		778AF564262463D900EA43C2 /* GTDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTDetailViewController.m; sourceTree = "<group>"; };
 		778AF56726248A9D00EA43C2 /* GTDeleteCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTDeleteCellView.h; sourceTree = "<group>"; };
 		778AF56826248A9D00EA43C2 /* GTDeleteCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTDeleteCellView.m; sourceTree = "<group>"; };
+		77BF7B4A2625A13C00352BA7 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		77BF7B4B2625A13C00352BA7 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,7 @@
 				77BF7B3A262592BA00352BA7 /* News */,
 				77BF7B402625937E00352BA7 /* Video */,
 				77BF7B422625939800352BA7 /* Recommend */,
+				77BF7B4726259F8B00352BA7 /* Mine */,
 				77BF7B3D2625930200352BA7 /* CommonTools */,
 				77BF7B3E2625931A00352BA7 /* SupportingFiles */,
 			);
@@ -198,8 +202,8 @@
 		77BF7B3C262592C800352BA7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7735CB25261EF95600A2320B /* GTNewsViewController.m */,
 				7735CB24261EF95600A2320B /* GTNewsViewController.h */,
+				7735CB25261EF95600A2320B /* GTNewsViewController.m */,
 				778AF563262463D900EA43C2 /* GTDetailViewController.h */,
 				778AF564262463D900EA43C2 /* GTDetailViewController.m */,
 			);
@@ -266,6 +270,31 @@
 			children = (
 				778AF5212623EF1500EA43C2 /* GTRecommendViewController.h */,
 				778AF5222623EF1500EA43C2 /* GTRecommendViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		77BF7B4726259F8B00352BA7 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				77BF7B4926259FD700352BA7 /* Controllers */,
+				77BF7B4826259FD100352BA7 /* Views */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		77BF7B4826259FD100352BA7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		77BF7B4926259FD700352BA7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				77BF7B4A2625A13C00352BA7 /* MineViewController.h */,
+				77BF7B4B2625A13C00352BA7 /* MineViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -373,6 +402,7 @@
 				778AF51F2623DEEE00EA43C2 /* GTVideoViewController.m in Sources */,
 				778AF5232623EF1500EA43C2 /* GTRecommendViewController.m in Sources */,
 				7735CB20261EF95600A2320B /* AppDelegate.m in Sources */,
+				77BF7B4C2625A13C00352BA7 /* MineViewController.m in Sources */,
 				7735CB31261EF95700A2320B /* main.m in Sources */,
 				7735CB23261EF95600A2320B /* SceneDelegate.m in Sources */,
 			);
