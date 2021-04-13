@@ -47,6 +47,7 @@
 		778AF565262463D900EA43C2 /* GTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AF564262463D900EA43C2 /* GTDetailViewController.m */; };
 		778AF56926248A9D00EA43C2 /* GTDeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AF56826248A9D00EA43C2 /* GTDeleteCellView.m */; };
 		77BF7B4C2625A13C00352BA7 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7B4B2625A13C00352BA7 /* MineViewController.m */; };
+		77BF7B512625B84100352BA7 /* GTListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7B502625B84100352BA7 /* GTListLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,8 @@
 		778AF56826248A9D00EA43C2 /* GTDeleteCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTDeleteCellView.m; sourceTree = "<group>"; };
 		77BF7B4A2625A13C00352BA7 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		77BF7B4B2625A13C00352BA7 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		77BF7B4F2625B84100352BA7 /* GTListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListLoader.h; sourceTree = "<group>"; };
+		77BF7B502625B84100352BA7 /* GTListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,7 @@
 		7735CB1D261EF95600A2320B /* SimpleApp */ = {
 			isa = PBXGroup;
 			children = (
+				77BF7B532625B85400352BA7 /* loader */,
 				7735CB2F261EF95700A2320B /* Info.plist */,
 				77BF7B3F2625935600352BA7 /* Main */,
 				77BF7B3A262592BA00352BA7 /* News */,
@@ -299,6 +303,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		77BF7B532625B85400352BA7 /* loader */ = {
+			isa = PBXGroup;
+			children = (
+				77BF7B4F2625B84100352BA7 /* GTListLoader.h */,
+				77BF7B502625B84100352BA7 /* GTListLoader.m */,
+			);
+			path = loader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -395,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77BF7B512625B84100352BA7 /* GTListLoader.m in Sources */,
 				778AF565262463D900EA43C2 /* GTDetailViewController.m in Sources */,
 				778AF56926248A9D00EA43C2 /* GTDeleteCellView.m in Sources */,
 				778AF52D262407C200EA43C2 /* GTNormalTableViewCell.m in Sources */,
