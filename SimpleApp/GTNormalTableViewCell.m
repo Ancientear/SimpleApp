@@ -84,6 +84,12 @@
             //添加操作方法
             [self.deleteButton addTarget:self action:@selector(deleteButtonClick) forControlEvents:UIControlEventTouchUpInside];
 
+            //给按钮增加效果
+            self.deleteButton.layer.cornerRadius = 10;
+            self.deleteButton.layer.masksToBounds = YES;
+            self.deleteButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
+            self.deleteButton.layer.borderWidth = 2;
+            
             self.deleteButton;
         })];
     }
