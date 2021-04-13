@@ -10,13 +10,14 @@
 #import "GTDetailViewController.h"
 #import "GTDeleteCellView.h"
 #import "GTListLoader.h"
+#import "GTListItem.h"
 @interface TestView : UIView
 @end
 
 
 @interface GTNewsViewController() <UITableViewDataSource,UITableViewDelegate,GTNormalTableViewCellDelegate>
 @property(nonatomic,strong,readwrite) UITableView *tableView;
-@property(nonatomic,strong,readwrite) NSMutableArray *dataArray;
+@property(nonatomic,strong,readwrite) NSArray *dataArray;
 @property(nonatomic,strong,readwrite) GTListLoader *listloader;
 @end
 
@@ -26,10 +27,7 @@
 - (instancetype)init{
     self = [super init];
     if(self){
-        _dataArray = @[].mutableCopy;
-        for(int i = 0 ; i < 20 ; ++i){
-            [_dataArray addObject:@(i)];
-        }
+
         self.tabBarItem.title = @"新闻";
         self.tabBarItem.image = [UIImage imageNamed:@"icons8-kawaii-jam-50.png"];
         self.tabBarItem.selectedImage = [UIImage imageNamed:@"icons8-kawaii-milk-50.png"];
@@ -47,8 +45,15 @@
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
+    __weak typeof(self) wself = self;
+
     self.listloader = [[GTListLoader alloc]init];
-    [self.listloader loadListData];
+    [self.listloader GTListLoaderFinishBlock:^(BOOL success, NSArray<GTListItem *> * _Nonnull dataArrray) {
+        __strong typeof(self)strongSelf = wself;
+        strongSelf.dataArray = dataArrray;
+        [strongSelf.tableView reloadData];
+
+    }];
 }
 
 
@@ -80,7 +85,7 @@
         cell = [[GTNormalTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
         cell.delegate = self;
     }
-    [cell layoutTableViewCell];
+    [cell layoutTableViewCellWithItem:[self.dataArray objectAtIndex:indexPath.row]];
     return cell;
 }
 
@@ -88,15 +93,15 @@
 //在GTNormalTbaleViewCell中创建的delegate，方法重写，可以具体到某个cell和button
 - (void)tableViewCell:(UITableViewCell *)tableViewCell clickDeleteButton:(UIButton *)deleteButton{
     
-    GTDeleteCellView *deleteView = [[GTDeleteCellView alloc]initWithFrame:self.view.bounds];
-    //将cell点击按钮处的坐标系转换到整个屏幕的坐标系
-    CGRect rect = [tableViewCell convertRect:deleteButton.frame toView:nil];
-    
-    __weak typeof(self) wself = self;
-    [deleteView showDeleteViewFromPoint:rect.origin clickBlock:^{
-        __strong typeof(self)strongSelf = wself;
-        [strongSelf.dataArray removeLastObject];
-        [strongSelf.tableView deleteRowsAtIndexPaths:@[[self.tableView indexPathForCell:tableViewCell]] withRowAnimation:UITableViewRowAnimationAutomatic];
-    }];
+//    GTDeleteCellView *deleteView = [[GTDeleteCellView alloc]initWithFrame:self.view.bounds];
+//    //将cell点击按钮处的坐标系转换到整个屏幕的坐标系
+//    CGRect rect = [tableViewCell convertRect:deleteButton.frame toView:nil];
+//    
+//    __weak typeof(self) wself = self;
+//    [deleteView showDeleteViewFromPoint:rect.origin clickBlock:^{
+//        __strong typeof(self)strongSelf = wself;
+//        [strongSelf.dataArray removeLastObject];
+//        [strongSelf.tableView deleteRowsAtIndexPaths:@[[self.tableView indexPathForCell:tableViewCell]] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    }];
 }
 @end
