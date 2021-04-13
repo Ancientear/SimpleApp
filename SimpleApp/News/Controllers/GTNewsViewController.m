@@ -64,7 +64,8 @@
 }
 //点击触发的方法
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    GTDetailViewController *controller = [[GTDetailViewController alloc]init];
+    GTListItem *item = [self.dataArray objectAtIndex:indexPath.row];
+    GTDetailViewController *controller = [[GTDetailViewController alloc]initWithUrlString:item.articleUrl];
     controller.title = [NSString stringWithFormat:@"%@" , @(indexPath.row)];
     [self.navigationController pushViewController:controller animated:YES];
     
@@ -96,7 +97,7 @@
 //    GTDeleteCellView *deleteView = [[GTDeleteCellView alloc]initWithFrame:self.view.bounds];
 //    //将cell点击按钮处的坐标系转换到整个屏幕的坐标系
 //    CGRect rect = [tableViewCell convertRect:deleteButton.frame toView:nil];
-//    
+//
 //    __weak typeof(self) wself = self;
 //    [deleteView showDeleteViewFromPoint:rect.origin clickBlock:^{
 //        __strong typeof(self)strongSelf = wself;

@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 //点击新闻tag的cell出现的详情界面，这里是csdn博客界面
 @interface GTDetailViewController : UIViewController
 
+//文章底层页
+-(instancetype) initWithUrlString:(NSString *)urlString;
 @end
 
 NS_ASSUME_NONNULL_END
