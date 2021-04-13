@@ -1,11 +1,11 @@
 //
-//  ViewController.m
+//  GTNewsViewController.m
 //  SimpleApp
 //
 //  Created by 申凡 on 2021/4/8.
 //
 
-#import "ViewController.h"
+#import "GTNewsViewController.h"
 #import "GTNormalTableViewCell.h"
 #import "GTDetailViewController.h"
 #import "GTDeleteCellView.h"
@@ -13,17 +13,17 @@
 @end
 
 
-@interface ViewController() <UITableViewDataSource,UITableViewDelegate,GTNormalTableViewCellDelegate>
+@interface GTNewsViewController() <UITableViewDataSource,UITableViewDelegate,GTNormalTableViewCellDelegate>
 @property(nonatomic,strong,readwrite) UITableView *tableView;
 @property(nonatomic,strong,readwrite) NSMutableArray *dataArray;
 @end
 
-@implementation ViewController
+@implementation GTNewsViewController
 
+#pragma mark - lefe cycle
 - (instancetype)init{
     self = [super init];
     if(self){
-        //数组中弄20个元素
         _dataArray = @[].mutableCopy;
         for(int i = 0 ; i < 20 ; ++i){
             [_dataArray addObject:@(i)];
@@ -47,6 +47,7 @@
     [self.view addSubview:_tableView];
 }
 
+#pragma mark - UITableViewDelegate
 //高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;
