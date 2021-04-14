@@ -9,7 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 //列表结构化数据
-@interface GTListItem : NSObject
+//序列化和反序列化列表中的数据
+@interface GTListItem : NSObject<NSSecureCoding>
 
 @property(nonatomic,copy,readwrite) NSString * category;
 @property(nonatomic,copy,readwrite) NSString * picUrl;
