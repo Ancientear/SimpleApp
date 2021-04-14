@@ -69,6 +69,8 @@
     controller.title = [NSString stringWithFormat:@"%@" , @(indexPath.row)];
     [self.navigationController pushViewController:controller animated:YES];
     
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:item.uniqueKey];
+    
 }
 
 
