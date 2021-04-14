@@ -114,12 +114,28 @@
 
     //加载图片一直在主线程上运行，使渲染卡顿。可以从主线程中分离出来，建立到自己建立的线程中
     
-    NSThread *downloadImageThread = [[NSThread alloc] initWithBlock:^{
+//    NSThread *downloadImageThread = [[NSThread alloc] initWithBlock:^{
+//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
+//        self.rightimageView.image = image;
+//    }];
+//    downloadImageThread.name = @"downloadImageThread";
+//    [downloadImageThread start];
+//
+    
+    //使用GCD实现这个业务逻辑,执行高耗时操作
+    dispatch_queue_global_t downloadQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+
+    //异步执行任务创建方法
+    dispatch_async(downloadQueue, ^{
         UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
-        self.rightimageView.image = image;
-    }];
-    downloadImageThread.name = @"downloadImageThread";
-    [downloadImageThread start];
+        dispatch_async(mainQueue, ^{
+            //UI渲染需要再次回到主线程
+            self.rightimageView.image = image;
+        });
+        
+    });
+    
 }
 
 //po [NSThread currentThread]查看当前线程
