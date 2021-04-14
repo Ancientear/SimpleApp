@@ -111,11 +111,19 @@
 	self.timeLabel.text = item.date;
 	[self.timeLabel sizeToFit];
 	self.timeLabel.frame = CGRectMake(self.commentLabel.frame.origin.x + self.commentLabel.frame.size.width + 15,self.timeLabel.frame.origin.y, self.timeLabel.frame.size.width,self.timeLabel.frame.size.height);
-#warning
-	UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
-	self.rightimageView.image = image;
 
+    //加载图片一直在主线程上运行，使渲染卡顿。可以从主线程中分离出来，建立到自己建立的线程中
+    
+    NSThread *downloadImageThread = [[NSThread alloc] initWithBlock:^{
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
+        self.rightimageView.image = image;
+    }];
+    downloadImageThread.name = @"downloadImageThread";
+    [downloadImageThread start];
 }
+
+//po [NSThread currentThread]查看当前线程
+//po [NSThread currentThread].isMainThread查看是否为主线程
 
 -(void)deleteButtonClick {
 	if(self.delegate && [self.delegate respondsToSelector:@selector(tableViewCell:clickDeleteButton:)]) {
