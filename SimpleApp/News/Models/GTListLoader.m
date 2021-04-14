@@ -40,8 +40,42 @@
 					  }];
 
 	[dataTask resume];
+    [self _getSandBoxPath];
 }
 
+- (void)_getSandBoxPath{
+    NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachePath = [pathArray firstObject];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    //创建文件夹
+    NSString *dataPath = [cachePath stringByAppendingPathComponent:@"GTData"];
+    NSError *creatError;
+    [fileManager createDirectoryAtPath:dataPath withIntermediateDirectories:YES attributes:nil error:&creatError];
+    
+    //创建一个list文件地址存取数据
+    NSString *listDataPath = [dataPath stringByAppendingPathComponent:@"list"];
+    NSData *listData = [@"abc" dataUsingEncoding:NSUTF8StringEncoding];
+    [fileManager createFileAtPath:listDataPath contents:listData attributes:nil];
+    
+    //查询文件
+    BOOL fileExist = [fileManager fileExistsAtPath:listDataPath];
+    
+    //删除文件
+//    if(fileExist){
+//        [fileManager removeItemAtPath:listDataPath error:nil];
+//    }
 
+    NSLog(@"");
+    
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForUpdatingAtPath:listDataPath];
+    
+    [fileHandle seekToEndOfFile];
+    [fileHandle writeData:[@"def" dataUsingEncoding:NSUTF8StringEncoding]];
+    [fileHandle synchronizeFile];
+    [fileHandle closeFile];
+    
+}
 
 @end
