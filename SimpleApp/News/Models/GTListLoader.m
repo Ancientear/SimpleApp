@@ -70,9 +70,13 @@
     
     //读取相关文件
     NSData *readListData = [fileManager contentsAtPath:listDataPath];
+//    id unarchiveObj = [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:[NSArray class], [GTListItem class],nil] fromData:readListData error:nil];
+    
+    
+    [[NSUserDefaults standardUserDefaults] setObject:listData forKey:@"listData"];
+    
+    NSData *testListData = [[NSUserDefaults standardUserDefaults]dataForKey:@"listData"];
     id unarchiveObj = [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:[NSArray class], [GTListItem class],nil] fromData:readListData error:nil];
-    
-    
 
 
 	//查询文件
