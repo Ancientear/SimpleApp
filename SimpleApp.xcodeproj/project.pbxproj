@@ -50,6 +50,7 @@
 		778AF56926248A9D00EA43C2 /* GTDeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AF56826248A9D00EA43C2 /* GTDeleteCellView.m */; };
 		779936B6262829BC0050BD99 /* GTVideoCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 779936B5262829BC0050BD99 /* GTVideoCoverView.m */; };
 		779936B9262831F10050BD99 /* 伪装者.png in Resources */ = {isa = PBXBuildFile; fileRef = 779936B8262831F10050BD99 /* 伪装者.png */; };
+		779936BD26285B160050BD99 /* GTVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 779936BC26285B160050BD99 /* GTVideoPlayer.m */; };
 		77BF7B4C2625A13C00352BA7 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7B4B2625A13C00352BA7 /* MineViewController.m */; };
 		77BF7B512625B84100352BA7 /* GTListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7B502625B84100352BA7 /* GTListLoader.m */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,8 @@
 		779936B4262829BC0050BD99 /* GTVideoCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoCoverView.h; sourceTree = "<group>"; };
 		779936B5262829BC0050BD99 /* GTVideoCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoCoverView.m; sourceTree = "<group>"; };
 		779936B8262831F10050BD99 /* 伪装者.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "伪装者.png"; sourceTree = "<group>"; };
+		779936BB26285B160050BD99 /* GTVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoPlayer.h; sourceTree = "<group>"; };
+		779936BC26285B160050BD99 /* GTVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoPlayer.m; sourceTree = "<group>"; };
 		77BF7B4A2625A13C00352BA7 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		77BF7B4B2625A13C00352BA7 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		77BF7B4F2625B84100352BA7 /* GTListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListLoader.h; sourceTree = "<group>"; };
@@ -294,6 +297,8 @@
 			children = (
 				778AF51D2623DEEE00EA43C2 /* GTVideoViewController.h */,
 				778AF51E2623DEEE00EA43C2 /* GTVideoViewController.m */,
+				779936BB26285B160050BD99 /* GTVideoPlayer.h */,
+				779936BC26285B160050BD99 /* GTVideoPlayer.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -505,6 +510,7 @@
 				7735CB26261EF95600A2320B /* GTNewsViewController.m in Sources */,
 				7715048A2625E975009BDABF /* GTListItem.m in Sources */,
 				779936B6262829BC0050BD99 /* GTVideoCoverView.m in Sources */,
+				779936BD26285B160050BD99 /* GTVideoPlayer.m in Sources */,
 				778AF51F2623DEEE00EA43C2 /* GTVideoViewController.m in Sources */,
 				778AF5232623EF1500EA43C2 /* GTRecommendViewController.m in Sources */,
 				7735CB20261EF95600A2320B /* AppDelegate.m in Sources */,
