@@ -44,6 +44,8 @@
 //对于NSNotification来说，注册的是一个单例的中心化管理，生命周期是整个app的周期，所以在类销毁的时候，要把自己从这个单例中移除
 -(void) dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    //也需要将status监听移除
+    [_videoItem removeObserver:self forKeyPath:@"status"];
 }
 
 #pragma mark -public method
@@ -64,6 +66,8 @@
 
     //AVPlayerItem里面好多通知
     _videoItem = [AVPlayerItem playerItemWithAsset:asset];
+    //完成self对_videoItem一个属性的监听
+    [_videoItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
     
     _avPlayer = [AVPlayer playerWithPlayerItem:_videoItem];
     
@@ -85,5 +89,19 @@
     [_playerLayer removeFromSuperlayer];
     _videoItem = nil;
     _avPlayer = nil;
+}
+
+#pragma  mark - KVO
+//添加一个status变化的操作
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    //首先判断监听的keyPath想是不是status
+    if ([keyPath isEqualToString:@"status"]) {
+        //将id类型转为number
+        if(((NSNumber *)[change objectForKey:NSKeyValueChangeNewKey]).integerValue == AVPlayerItemStatusReadyToPlay){
+             [_avPlayer play];
+        }else{
+            NSLog(@"");
+        }
+    }
 }
 @end
