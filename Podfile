@@ -7,5 +7,7 @@ target 'SimpleApp' do
 
   # Pods for SimpleApp
 	pod 'AFNetworking'
+pod 'SDWebImage', '~> 5.0.6'
+
 
 end
