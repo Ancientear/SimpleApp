@@ -44,8 +44,9 @@
 	collectionView.dataSource = self;
 
 	//3.UICollectionView需要注册cell
-	[collectionView registerClass:[GTVideoCoverView class] forCellWithReuseIdentifier:@"GTVideoCoverView"];
-
+	//[collectionView registerClass:[GTVideoCoverView class] forCellWithReuseIdentifier:@"GTVideoCoverView"];
+    [collectionView registerClass:[GTVideoCoverView class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
+    
 	[self.view addSubview:collectionView];
 }
 
@@ -58,7 +59,7 @@
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 	//在自动池中取到了一个cell
-	UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GTVideoCoverView" forIndexPath:indexPath];
+	UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
     if ([cell isKindOfClass:[GTVideoCoverView class]]) {
         //http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4
         [((GTVideoCoverView*)cell) layoutWithVideoCoverUrl:@"伪装者.png" videoUrl:@"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"];

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 //播放器是一个单例
 + (GTVideoPlayer *)Player;
 //播放器提供一个通过url播放视频的接口,还要贴到对应的view上
-- (void)playVideoWithUrl:(NSString *)videoUrl attachView:(UIView *) attachView;
+- (void)playVideoWithUrl:(NSString *)videoUrl attachView:(UIView *)attachView;
 
 @end
 

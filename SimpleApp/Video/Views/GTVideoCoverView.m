@@ -10,9 +10,9 @@
 #import "GTVideoPlayer.h"
 
 @interface GTVideoCoverView()
-@property(nonatomic,strong,readwrite)UIImageView *coverView;
-@property(nonatomic,strong,readwrite)UIImageView *playButton;
-@property(nonatomic,copy,readwrite) NSString *videoUrl;
+@property (nonatomic, strong, readwrite) UIImageView *coverView;
+@property (nonatomic, strong, readwrite) UIImageView *playButton;
+@property (nonatomic, copy, readwrite) NSString *videoUrl;
 @end
 
 @implementation GTVideoCoverView
@@ -41,7 +41,7 @@
 }
 
 #pragma mark -public method
-- (void)layoutWithVideoCoverUrl:(NSString *)videoCoverUrl videoUrl:(NSString *)videoUrl{
+- (void)layoutWithVideoCoverUrl:(NSString *)videoCoverUrl videoUrl:(NSString *)videoUrl {
     _coverView.image = [UIImage imageNamed:videoCoverUrl];
     _videoUrl = videoUrl;
 }
@@ -49,9 +49,9 @@
 
 #pragma mark - private public
 //视频播放的业务逻辑，首先是有一个占位图，占位图上有一个视频播放的按钮，当点击播放的时候，视频的界面粘贴到全部的界面上来
-- (void)_tapToPlay{
-    //只需要传入url和view来调用单例播放器
-    [[GTVideoPlayer Player] playVideoWithUrl:_videoUrl attachView:_coverView];
 
+- (void)_tapToPlay {
+    //在当前Item上播放视频
+    [[GTVideoPlayer Player] playVideoWithUrl:_videoUrl attachView:_coverView];
 }
 @end
