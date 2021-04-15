@@ -95,9 +95,10 @@
 
 
 -(void)_handlePlayEnd{
-    [_playerLayer removeFromSuperlayer];
-    _videoItem = nil;
-    _avPlayer = nil;
+//    [_playerLayer removeFromSuperlayer];
+//    _videoItem = nil;
+//    _avPlayer = nil;
+    [_avPlayer seekToTime:CMTimeMake(0,1)];
 }
 
 #pragma  mark - KVO
