@@ -46,6 +46,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     //也需要将status监听移除
     [_videoItem removeObserver:self forKeyPath:@"status"];
+    [_videoItem removeObserver:self forKeyPath:@"loadedTimeRanges"];
 }
 
 #pragma mark -public method
@@ -68,6 +69,11 @@
     _videoItem = [AVPlayerItem playerItemWithAsset:asset];
     //完成self对_videoItem一个属性的监听
     [_videoItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+    //缓冲进度
+    [_videoItem addObserver:self forKeyPath:@"loadedTimeRanges" options:NSKeyValueObservingOptionNew context:nil];
+    //时长
+    CMTime duration = _videoItem.duration;
+    CGFloat videoDuration = CMTimeGetSeconds(duration);
     
     _avPlayer = [AVPlayer playerWithPlayerItem:_videoItem];
     
@@ -102,6 +108,8 @@
         }else{
             NSLog(@"");
         }
+    }else if([keyPath isEqualToString:@"loadedTimeRanges"]) {
+        NSLog(@"缓冲：%@",[change objectForKey:NSKeyValueChangeNewKey]);
     }
 }
 @end
