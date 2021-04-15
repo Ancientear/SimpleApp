@@ -76,6 +76,9 @@
     CGFloat videoDuration = CMTimeGetSeconds(duration);
     
     _avPlayer = [AVPlayer playerWithPlayerItem:_videoItem];
+    [_avPlayer addPeriodicTimeObserverForInterval:CMTimeMake(1, 1) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
+        NSLog(@"播放进度:%@",@(CMTimeGetSeconds(time)));
+    }];
     
     //playLayer只提供画面的展示，不会响应手势
     _playerLayer = [AVPlayerLayer playerLayerWithPlayer:_avPlayer];
