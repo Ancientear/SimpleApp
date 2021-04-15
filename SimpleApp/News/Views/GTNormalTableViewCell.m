@@ -137,12 +137,12 @@
 //        });
 //
 //    });
-    //这就完成了整个之前的图片加载的逻辑
-    //代码其实执行了两件事情，首先传入一个图片的URL。然后sd会进行一个是否在磁盘以及缓存当中一个图片已经存在的一个读取。如果没有会去网络下载，然后存储到磁盘当中，继续展示。当整个的流程执行结束之后，会调用这个combination相关的回调。
-    [self.rightimageView sd_setImageWithURL:[NSURL URLWithString:item.picUrl] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        NSLog(@"");
-    }];
-    
+
+        //这就完成了整个之前的图片加载的逻辑
+        //代码其实执行了两件事情，首先传入一个图片的URL。然后sd会进行一个是否在磁盘以及缓存当中一个图片已经存在的一个读取。如果没有会去网络下载，然后存储到磁盘当中，继续展示。当整个的流程执行结束之后，会调用这个combination相关的回调。
+        [self.rightimageView sd_setImageWithURL:[NSURL URLWithString:item.picUrl] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+            NSLog(@"");
+        }];
     
 }
 
