@@ -55,6 +55,7 @@
 		77BF7B4C2625A13C00352BA7 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7B4B2625A13C00352BA7 /* MineViewController.m */; };
 		77BF7B512625B84100352BA7 /* GTListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7B502625B84100352BA7 /* GTListLoader.m */; };
 		77F28D1626296A2A00ED673A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F28D1526296A2A00ED673A /* Assets.xcassets */; };
+		77F28D1B26299DE100ED673A /* GTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 77F28D1A26299DE100ED673A /* GTScreen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +125,8 @@
 		77BF7B4F2625B84100352BA7 /* GTListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListLoader.h; sourceTree = "<group>"; };
 		77BF7B502625B84100352BA7 /* GTListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListLoader.m; sourceTree = "<group>"; };
 		77F28D1526296A2A00ED673A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		77F28D1926299DE100ED673A /* GTScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTScreen.h; sourceTree = "<group>"; };
+		77F28D1A26299DE100ED673A /* GTScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTScreen.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 			children = (
 				77B1F1EB26295131003FF2CF /* icon.bundle */,
 				7735CB2F261EF95700A2320B /* Info.plist */,
+				77F28D1926299DE100ED673A /* GTScreen.h */,
+				77F28D1A26299DE100ED673A /* GTScreen.m */,
 				77BF7B3F2625935600352BA7 /* Main */,
 				77BF7B3A262592BA00352BA7 /* News */,
 				77BF7B402625937E00352BA7 /* Video */,
@@ -512,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77F28D1B26299DE100ED673A /* GTScreen.m in Sources */,
 				77BF7B512625B84100352BA7 /* GTListLoader.m in Sources */,
 				778AF565262463D900EA43C2 /* GTDetailViewController.m in Sources */,
 				778AF56926248A9D00EA43C2 /* GTDeleteCellView.m in Sources */,
