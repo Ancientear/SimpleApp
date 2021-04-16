@@ -7,6 +7,7 @@
 
 #import "GTVideoViewController.h"
 #import "GTVideoCoverView.h"
+#import "GTVideoToolbar.h"
 
 @interface GTVideoViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -34,7 +35,7 @@
 	//设置布局间距以及大小，这个方法所有的item都是相同的
 	flowLayout.minimumLineSpacing = 10;
 	flowLayout.minimumInteritemSpacing = 10;
-	flowLayout.itemSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.width / 16 * 9);
+	flowLayout.itemSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.width / 16 * 9 + GTViderToolbarHeight);
 
 	//1.创建一个UICollectionView需要屏幕的大小和一个flowLayout
 	UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
@@ -62,7 +63,7 @@
 	UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell" forIndexPath:indexPath];
     if ([cell isKindOfClass:[GTVideoCoverView class]]) {
         //http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4
-        [((GTVideoCoverView*)cell) layoutWithVideoCoverUrl:@"伪装者.png" videoUrl:@"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"];
+        [((GTVideoCoverView*)cell) layoutWithVideoCoverUrl:@"icon.bundle/videoCover@3x.png" videoUrl:@"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"];
         
     }
 	return cell;

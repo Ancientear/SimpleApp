@@ -13,7 +13,6 @@
 		7735CB23261EF95600A2320B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7735CB22261EF95600A2320B /* SceneDelegate.m */; };
 		7735CB26261EF95600A2320B /* GTNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7735CB25261EF95600A2320B /* GTNewsViewController.m */; };
 		7735CB29261EF95600A2320B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7735CB27261EF95600A2320B /* Main.storyboard */; };
-		7735CB2B261EF95700A2320B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7735CB2A261EF95700A2320B /* Assets.xcassets */; };
 		7735CB2E261EF95700A2320B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7735CB2C261EF95700A2320B /* LaunchScreen.storyboard */; };
 		7735CB31261EF95700A2320B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7735CB30261EF95700A2320B /* main.m */; };
 		778AF5182622B0CC00EA43C2 /* left_disable.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AF5172622B0CC00EA43C2 /* left_disable.png */; };
@@ -51,8 +50,11 @@
 		779936B6262829BC0050BD99 /* GTVideoCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 779936B5262829BC0050BD99 /* GTVideoCoverView.m */; };
 		779936B9262831F10050BD99 /* 伪装者.png in Resources */ = {isa = PBXBuildFile; fileRef = 779936B8262831F10050BD99 /* 伪装者.png */; };
 		779936BD26285B160050BD99 /* GTVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 779936BC26285B160050BD99 /* GTVideoPlayer.m */; };
+		77B1F1E5262931B2003FF2CF /* GTVideoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B1F1E4262931B2003FF2CF /* GTVideoToolbar.m */; };
+		77B1F1EC26295131003FF2CF /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 77B1F1EB26295131003FF2CF /* icon.bundle */; };
 		77BF7B4C2625A13C00352BA7 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7B4B2625A13C00352BA7 /* MineViewController.m */; };
 		77BF7B512625B84100352BA7 /* GTListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7B502625B84100352BA7 /* GTListLoader.m */; };
+		77F28D1626296A2A00ED673A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F28D1526296A2A00ED673A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,7 +71,6 @@
 		7735CB24261EF95600A2320B /* GTNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNewsViewController.h; sourceTree = "<group>"; };
 		7735CB25261EF95600A2320B /* GTNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNewsViewController.m; sourceTree = "<group>"; };
 		7735CB28261EF95600A2320B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7735CB2A261EF95700A2320B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7735CB2D261EF95700A2320B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7735CB2F261EF95700A2320B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7735CB30261EF95700A2320B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -115,10 +116,14 @@
 		779936B8262831F10050BD99 /* 伪装者.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "伪装者.png"; sourceTree = "<group>"; };
 		779936BB26285B160050BD99 /* GTVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoPlayer.h; sourceTree = "<group>"; };
 		779936BC26285B160050BD99 /* GTVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoPlayer.m; sourceTree = "<group>"; };
+		77B1F1E3262931B2003FF2CF /* GTVideoToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoToolbar.h; sourceTree = "<group>"; };
+		77B1F1E4262931B2003FF2CF /* GTVideoToolbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoToolbar.m; sourceTree = "<group>"; };
+		77B1F1EB26295131003FF2CF /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
 		77BF7B4A2625A13C00352BA7 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		77BF7B4B2625A13C00352BA7 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		77BF7B4F2625B84100352BA7 /* GTListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListLoader.h; sourceTree = "<group>"; };
 		77BF7B502625B84100352BA7 /* GTListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListLoader.m; sourceTree = "<group>"; };
+		77F28D1526296A2A00ED673A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +170,7 @@
 		7735CB1D261EF95600A2320B /* SimpleApp */ = {
 			isa = PBXGroup;
 			children = (
+				77B1F1EB26295131003FF2CF /* icon.bundle */,
 				7735CB2F261EF95700A2320B /* Info.plist */,
 				77BF7B3F2625935600352BA7 /* Main */,
 				77BF7B3A262592BA00352BA7 /* News */,
@@ -217,6 +223,8 @@
 			children = (
 				779936B4262829BC0050BD99 /* GTVideoCoverView.h */,
 				779936B5262829BC0050BD99 /* GTVideoCoverView.m */,
+				77B1F1E3262931B2003FF2CF /* GTVideoToolbar.h */,
+				77B1F1E4262931B2003FF2CF /* GTVideoToolbar.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -263,7 +271,7 @@
 		77BF7B3E2625931A00352BA7 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				7735CB2A261EF95700A2320B /* Assets.xcassets */,
+				77F28D1526296A2A00ED673A /* Assets.xcassets */,
 				778AF5162622B0B300EA43C2 /* Image */,
 			);
 			path = SupportingFiles;
@@ -428,7 +436,6 @@
 				778AF5182622B0CC00EA43C2 /* left_disable.png in Resources */,
 				778AF55B26243D8E00EA43C2 /* icons8-kawaii-noodle-50.png in Resources */,
 				778AF55426243D8E00EA43C2 /* icons8-kawaii-milk-50.png in Resources */,
-				7735CB2B261EF95700A2320B /* Assets.xcassets in Resources */,
 				778AF55926243D8E00EA43C2 /* icons8-kawaii-taco-50.png in Resources */,
 				778AF54326243D8000EA43C2 /* icons8-折纸-50.png in Resources */,
 				778AF56026243D8E00EA43C2 /* icons8-third-eye-symbol-50.png in Resources */,
@@ -449,7 +456,9 @@
 				778AF55C26243D8E00EA43C2 /* icons8-lilith-symbol-50.png in Resources */,
 				778AF55D26243D8E00EA43C2 /* icons8-mayura-gesture-50.png in Resources */,
 				778AF53D26243D8000EA43C2 /* icons8-greek-god-zeus-50.png in Resources */,
+				77B1F1EC26295131003FF2CF /* icon.bundle in Resources */,
 				779936B9262831F10050BD99 /* 伪装者.png in Resources */,
+				77F28D1626296A2A00ED673A /* Assets.xcassets in Resources */,
 				778AF54226243D8000EA43C2 /* icons8-大耳猴-50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +522,7 @@
 				779936BD26285B160050BD99 /* GTVideoPlayer.m in Sources */,
 				778AF51F2623DEEE00EA43C2 /* GTVideoViewController.m in Sources */,
 				778AF5232623EF1500EA43C2 /* GTRecommendViewController.m in Sources */,
+				77B1F1E5262931B2003FF2CF /* GTVideoToolbar.m in Sources */,
 				7735CB20261EF95600A2320B /* AppDelegate.m in Sources */,
 				77BF7B4C2625A13C00352BA7 /* MineViewController.m in Sources */,
 				7735CB31261EF95700A2320B /* main.m in Sources */,
@@ -658,7 +668,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 39947D5DDC427F496C49B051 /* Pods-SimpleApp.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SimpleApp/Info.plist;
@@ -676,7 +686,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 17873107212B7EA296F34707 /* Pods-SimpleApp.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SimpleApp/Info.plist;
