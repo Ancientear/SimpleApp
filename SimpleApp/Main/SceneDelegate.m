@@ -10,6 +10,7 @@
 #import "GTVideoViewController.h"
 #import "GTRecommendViewController.h"
 #import "MineViewController.h"
+#import "GTSplashView.h"
 @interface SceneDelegate ()<UITabBarControllerDelegate>
 //声明要使用的这个协议
 
@@ -40,6 +41,12 @@
 	self.window.rootViewController = navigationController;
     //使窗口可见
 	[self.window makeKeyAndVisible];
+    
+    //闪屏消失之后加入自己的闪屏
+    [self.window addSubview:({
+        GTSplashView *splashView =  [[GTSplashView alloc]initWithFrame:self.window.bounds];
+        splashView;
+    })];
 }
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {

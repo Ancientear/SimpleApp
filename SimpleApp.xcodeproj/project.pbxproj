@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4007854DB0CB50C116471C8D /* Pods_SimpleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FEC29E77B10B651ADF89F27 /* Pods_SimpleApp.framework */; };
+		77084E0F263F03C500D9BDE6 /* GTSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77084E0E263F03C500D9BDE6 /* GTSplashView.m */; };
+		77084E11263F08E300D9BDE6 /* Launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 77084E10263F08E300D9BDE6 /* Launch.png */; };
 		7715048A2625E975009BDABF /* GTListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 771504892625E975009BDABF /* GTListItem.m */; };
 		7735CB20261EF95600A2320B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7735CB1F261EF95600A2320B /* AppDelegate.m */; };
 		7735CB23261EF95600A2320B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7735CB22261EF95600A2320B /* SceneDelegate.m */; };
@@ -62,6 +64,9 @@
 		17873107212B7EA296F34707 /* Pods-SimpleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleApp/Pods-SimpleApp.release.xcconfig"; sourceTree = "<group>"; };
 		2FEC29E77B10B651ADF89F27 /* Pods_SimpleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39947D5DDC427F496C49B051 /* Pods-SimpleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleApp/Pods-SimpleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		77084E0D263F03C500D9BDE6 /* GTSplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTSplashView.h; sourceTree = "<group>"; };
+		77084E0E263F03C500D9BDE6 /* GTSplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTSplashView.m; sourceTree = "<group>"; };
+		77084E10263F08E300D9BDE6 /* Launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launch.png; sourceTree = "<group>"; };
 		771504882625E975009BDABF /* GTListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListItem.h; sourceTree = "<group>"; };
 		771504892625E975009BDABF /* GTListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListItem.m; sourceTree = "<group>"; };
 		7735CB1B261EF95600A2320B /* SimpleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +196,7 @@
 		778AF5162622B0B300EA43C2 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				77084E10263F08E300D9BDE6 /* Launch.png */,
 				778AF54926243D8E00EA43C2 /* icons8-kawaii-croissant-50.png */,
 				778AF55026243D8E00EA43C2 /* icons8-kawaii-cupcake-50.png */,
 				778AF54A26243D8E00EA43C2 /* icons8-kawaii-dinosaur-50.png */,
@@ -292,6 +298,8 @@
 				7735CB27261EF95600A2320B /* Main.storyboard */,
 				7735CB30261EF95700A2320B /* main.m */,
 				7735CB2C261EF95700A2320B /* LaunchScreen.storyboard */,
+				77084E0D263F03C500D9BDE6 /* GTSplashView.h */,
+				77084E0E263F03C500D9BDE6 /* GTSplashView.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -451,6 +459,7 @@
 				778AF53F26243D8000EA43C2 /* icons8-buddha-50.png in Resources */,
 				778AF51B2622B15A00EA43C2 /* right_disable.png in Resources */,
 				778AF55826243D8E00EA43C2 /* icons8-kawaii-dinosaur-50.png in Resources */,
+				77084E11263F08E300D9BDE6 /* Launch.png in Resources */,
 				778AF53A26243D8000EA43C2 /* icons8-kawaii-broccoli-50.png in Resources */,
 				778AF55A26243D8E00EA43C2 /* icons8-kawaii-french-fries-50.png in Resources */,
 				778AF55E26243D8E00EA43C2 /* icons8-kawaii-cupcake-50.png in Resources */,
@@ -530,6 +539,7 @@
 				778AF5232623EF1500EA43C2 /* GTRecommendViewController.m in Sources */,
 				77B1F1E5262931B2003FF2CF /* GTVideoToolbar.m in Sources */,
 				7735CB20261EF95600A2320B /* AppDelegate.m in Sources */,
+				77084E0F263F03C500D9BDE6 /* GTSplashView.m in Sources */,
 				77BF7B4C2625A13C00352BA7 /* MineViewController.m in Sources */,
 				7735CB31261EF95700A2320B /* main.m in Sources */,
 				7735CB23261EF95600A2320B /* SceneDelegate.m in Sources */,
