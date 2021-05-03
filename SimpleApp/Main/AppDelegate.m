@@ -36,5 +36,10 @@
 	// Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 }
 
-
+#pragma  mark -
+//Url Scheme的应用，判断URL是否被正常解析
+//在UIApplucation中处理参数和业务逻辑，options是跳转参数（来源）。函数体内可以实现业务逻辑
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    return YES;
+}
 @end

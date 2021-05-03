@@ -23,49 +23,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F27445E9-831A-4797-9B29-51E0540D1DC5"
+            uuid = "B8017E48-AD0C-43F2-AB66-1E81A1F994FB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SimpleApp/Main/SceneDelegate.m"
+            filePath = "SimpleApp/Main/AppDelegate.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "-scene:willConnectToSession:options:"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-application:openURL:options:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0FAB7EEE-C89A-4F83-976F-D1552C94A1A4"
+            uuid = "5CDE98E9-744F-4852-8980-EC686B25CE37"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SimpleApp/Main/GTSplashView.m"
+            filePath = "SimpleApp/Recommend/Controllers/GTRecommendViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "-initWithFrame:"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "-viewClick"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "03D87B87-2135-4F0C-A1CF-A0F8B5DCB2FA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SimpleApp/Main/SceneDelegate.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-scene:willConnectToSession:options:"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5CDE98E9-744F-4852-8980-EC686B25CE37 - 97a999fd64bff177"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GTRecommendViewController viewClick]"
+                  moduleName = "SimpleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shenfan/OCProjects/SimpleApp/SimpleApp/Recommend/Controllers/GTRecommendViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "143">
+               </Location>
+               <Location
+                  uuid = "5CDE98E9-744F-4852-8980-EC686B25CE37 - 2ccafd7f86b4c89f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__38-[GTRecommendViewController viewClick]_block_invoke"
+                  moduleName = "SimpleApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shenfan/OCProjects/SimpleApp/SimpleApp/Recommend/Controllers/GTRecommendViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

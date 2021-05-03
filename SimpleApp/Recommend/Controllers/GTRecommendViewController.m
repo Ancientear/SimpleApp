@@ -86,9 +86,14 @@
 	NSLog(@"scrollViewDidEndDragging");
 }
 
-
+//有的话直接跳转，无的话跳转到商店或者是h5页面
 - (void)viewClick {
-	NSLog(@"viewClick");
+    NSURL *urlScheme = [NSURL URLWithString:@"testScheme://"];
+    BOOL canOpenURL = [[UIApplication sharedApplication] canOpenURL:urlScheme];
+    
+    [[UIApplication sharedApplication] openURL:urlScheme options:nil completionHandler:^(BOOL success){
+            NSLog(@"");
+    }];
 }
 @end
 
