@@ -54,6 +54,7 @@
 		779936BD26285B160050BD99 /* GTVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 779936BC26285B160050BD99 /* GTVideoPlayer.m */; };
 		77B1F1E5262931B2003FF2CF /* GTVideoToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B1F1E4262931B2003FF2CF /* GTVideoToolbar.m */; };
 		77B1F1EC26295131003FF2CF /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 77B1F1EB26295131003FF2CF /* icon.bundle */; };
+		77B4AD1D2640479800B82339 /* GTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B4AD1C2640479800B82339 /* GTMediator.m */; };
 		77BF7B4C2625A13C00352BA7 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7B4B2625A13C00352BA7 /* MineViewController.m */; };
 		77BF7B512625B84100352BA7 /* GTListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 77BF7B502625B84100352BA7 /* GTListLoader.m */; };
 		77F28D1626296A2A00ED673A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77F28D1526296A2A00ED673A /* Assets.xcassets */; };
@@ -125,6 +126,8 @@
 		77B1F1E3262931B2003FF2CF /* GTVideoToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoToolbar.h; sourceTree = "<group>"; };
 		77B1F1E4262931B2003FF2CF /* GTVideoToolbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoToolbar.m; sourceTree = "<group>"; };
 		77B1F1EB26295131003FF2CF /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
+		77B4AD1B2640479800B82339 /* GTMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMediator.h; sourceTree = "<group>"; };
+		77B4AD1C2640479800B82339 /* GTMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTMediator.m; sourceTree = "<group>"; };
 		77BF7B4A2625A13C00352BA7 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		77BF7B4B2625A13C00352BA7 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		77BF7B4F2625B84100352BA7 /* GTListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListLoader.h; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 				77BF7B4726259F8B00352BA7 /* Mine */,
 				77BF7B3D2625930200352BA7 /* CommonTools */,
 				77BF7B3E2625931A00352BA7 /* SupportingFiles */,
+				77B4AD1B2640479800B82339 /* GTMediator.h */,
+				77B4AD1C2640479800B82339 /* GTMediator.m */,
 			);
 			path = SimpleApp;
 			sourceTree = "<group>";
@@ -529,6 +534,7 @@
 				77F28D1B26299DE100ED673A /* GTScreen.m in Sources */,
 				77BF7B512625B84100352BA7 /* GTListLoader.m in Sources */,
 				778AF565262463D900EA43C2 /* GTDetailViewController.m in Sources */,
+				77B4AD1D2640479800B82339 /* GTMediator.m in Sources */,
 				778AF56926248A9D00EA43C2 /* GTDeleteCellView.m in Sources */,
 				778AF52D262407C200EA43C2 /* GTNormalTableViewCell.m in Sources */,
 				7735CB26261EF95600A2320B /* GTNewsViewController.m in Sources */,
@@ -692,6 +698,16 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.-Ancientear.SimpleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -709,6 +725,16 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.-Ancientear.SimpleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
