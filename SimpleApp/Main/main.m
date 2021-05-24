@@ -7,9 +7,13 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "Test.h"
 
 int main(int argc, char * argv[]) {
     NSString * appDelegateClassName;
+    Test *te = [[Test alloc]init];
+    [te run];
+    
     @autoreleasepool {
         // Setup code that might create autoreleased objects goes here.
         appDelegateClassName = NSStringFromClass([AppDelegate class]);
